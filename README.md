@@ -1,2 +1,5 @@
-# npm-project-boilerplate
-The boilerplate of the NPM project
+# 📄 Yarn project boilerplate
+
+## LICENSE
+
+MIT
