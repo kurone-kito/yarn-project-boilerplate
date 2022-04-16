@@ -1,0 +1,12 @@
+name: The CI workflow on push
+on:
+  push:
+permissions:
+  contents: read
+jobs:
+  build:
+    name: The build process
+    runs-on: ubuntu-latest
+    steps:
+      - name: Stages the pushed branch
+        uses: actions/checkout@v2
