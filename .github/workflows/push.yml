@@ -10,3 +10,13 @@ jobs:
     steps:
       - name: Stages the pushed branch
         uses: actions/checkout@v2
+      - name: Prepare the Node.js version ${{ matrix.node-version }} environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+    strategy:
+      matrix:
+        node-version:
+          - 14.x
+          - 16.x
+          - 17.x
