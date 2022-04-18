@@ -13,7 +13,10 @@ jobs:
       - name: Prepare the Node.js version ${{ matrix.node-version }} environment
         uses: actions/setup-node@v2
         with:
+          cache: ${{ !env.ACT && 'yarn' || '' }}
           node-version: ${{ matrix.node-version }}
+      - name: Install the Yarn
+        run: npm install --global yarn@berry
     strategy:
       matrix:
         node-version:
