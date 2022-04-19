@@ -17,6 +17,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install the Yarn
         run: npm install --global yarn@berry
+      - name: Install the dependencies
+        run: yarn install
     strategy:
       matrix:
         node-version:

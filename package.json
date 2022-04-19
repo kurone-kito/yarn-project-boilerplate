@@ -1,3 +1,22 @@
 {
-  "packageManager": "yarn@3.2.0"
+  "name": "yarn-project-boilerplate",
+  "version": "0.1.0",
+  "private": true,
+  "description": "The boilerplate project of the Node.js / Yarn",
+  "keywords": [
+    "boilerplate"
+  ],
+  "homepage": "https://github.com/kurone-kito/yarn-project-boilerplate#readme",
+  "bugs": "https://github.com/kurone-kito/yarn-project-boilerplate/issues",
+  "repository": "github:kurone-kito/yarn-project-boilerplate",
+  "author": "kurone-kito <krone@kit.black> (https://kit.black/)",
+  "files": [],
+  "devDependencies": {
+    "@yarnpkg/sdks": "^3.0.0-rc.2"
+  },
+  "packageManager": "yarn@3.2.0",
+  "engines": {
+    "node": ">=14.19.1",
+    "yarn": ">=2.4.3"
+  }
 }
