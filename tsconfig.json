@@ -18,6 +18,11 @@
     "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
     "noUnusedParameters": true,
+    "plugins": [
+      {
+        "name": "typescript-eslint-language-service"
+      }
+    ],
     "preserveWatchOutput": true,
     "resolveJsonModule": true,
     "sourceMap": true,
