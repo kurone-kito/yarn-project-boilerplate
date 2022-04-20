@@ -11,6 +11,21 @@
 yarn install
 ```
 
+## Linting
+
+```sh
+yarn run lint
+yarn run lint:fix # Lint and auto-fix
+```
+
+## Testing
+
+```sh
+yarn run test
+```
+
+Currently, the command works as an alias for the `yarn run lint` command.
+
 ## Rules for Development
 
 Introduce commit message validation at commit time.
