@@ -11,8 +11,13 @@
   "repository": "github:kurone-kito/yarn-project-boilerplate",
   "author": "kurone-kito <krone@kit.black> (https://kit.black/)",
   "files": [],
+  "scripts": {
+    "postinstall": "path-exists .git && husky install || exit 0"
+  },
   "devDependencies": {
     "@yarnpkg/sdks": "^3.0.0-rc.2",
+    "husky": "^7.0.4",
+    "path-exists-cli": "^2.0.0",
     "typescript": "^4.6.3"
   },
   "packageManager": "yarn@3.2.0",
