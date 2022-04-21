@@ -46,10 +46,6 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-### macOS Patch ###
-# iCloud generated files
-*.icloud
-
 ### Node ###
 # Logs
 logs
@@ -148,7 +144,7 @@ dist
 .cache/
 # Comment in the public line in if your project uses Gatsby and not Next.js
 # https://nextjs.org/blog/next-9-1#public-directory-support
-public
+# public
 
 # vuepress build output
 .vuepress/dist
@@ -291,3 +287,20 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/linux,macos,node,sublimetext,vim,visualstudiocode,windows
+
+### THE PROJECT SPECIFIES #################################################
+
+### Node ###
+# ESLint
+.eslintrc.js
+.eslintrc.cjs
+
+# JSON
+*.json
+
+# yarn v2
+.yarn/
+yarn.lock
+
+### Text ###
+LICENSE

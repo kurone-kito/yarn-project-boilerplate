@@ -1,0 +1,30 @@
+name: The CI workflow on push
+on:
+  push:
+permissions:
+  contents: read
+jobs:
+  build:
+    name: The build process
+    runs-on: ubuntu-latest
+    steps:
+      - name: Stages the pushed branch
+        uses: actions/checkout@v2
+      - name: Prepare the Node.js version ${{ matrix.node-version }} environment
+        uses: actions/setup-node@v2
+        with:
+          cache: ${{ !env.ACT && 'yarn' || '' }}
+          node-version: ${{ matrix.node-version }}
+      - name: Install the Yarn
+        run: npm install --global yarn@berry
+      - name: Install the dependencies
+        run: yarn install
+      - name: Run the tests
+        run: yarn run test
+    strategy:
+      matrix:
+        node-version:
+          - 14.x
+          - 16.x
+          - 17.x
+          - 18.x
