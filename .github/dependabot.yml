@@ -1,12 +1,12 @@
 version: 2
 updates:
-  directory: /
-  labels:
-    - dependencies
-  package-ecosystem: yarn
-  reviewers:
-    - kurone-kito
-  assignees:
-    - kurone-kito
-  schedule:
-    interval: weekly
+  - directory: /
+    labels:
+      - dependencies
+    package-ecosystem: yarn
+    reviewers:
+      - kurone-kito
+    assignees:
+      - kurone-kito
+    schedule:
+      interval: weekly
