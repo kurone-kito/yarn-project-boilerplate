@@ -1,5 +1,5 @@
 {
-  "name": "yarn-project-boilerplate",
+  "name": "@kurone-kito/yarn-project-boilerplate",
   "version": "0.1.0",
   "private": true,
   "description": "The boilerplate project of the Node.js / Yarn",
@@ -56,5 +56,8 @@
   "engines": {
     "node": ">=14.19.1",
     "yarn": ">=2.4.3"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
