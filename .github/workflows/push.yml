@@ -18,7 +18,7 @@ jobs:
       - name: Install the Yarn
         run: npm install --global yarn@berry
       - name: Install the dependencies
-        run: yarn install
+        run: yarn install --inline-builds
       - name: Run the tests
         run: yarn run test
     strategy:
