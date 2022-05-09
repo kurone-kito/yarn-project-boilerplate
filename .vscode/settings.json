@@ -1,4 +1,16 @@
 {
+  "cSpell.ignorePaths": [
+    ".*rc.*",
+    ".git/objects",
+    ".github/CODE_OF_CONDUCT.*",
+    ".vscode",
+    ".vscode-insiders",
+    ".yarn",
+    "node_modules",
+    "vscode-extension",
+    "yarn.lock"
+  ],
+  "cSpell.words": ["Kito", "Kuroné", "kurone-kito"],
   "eslint.nodePath": ".yarn/sdks",
   "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
   "search.exclude": {
