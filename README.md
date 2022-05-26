@@ -45,7 +45,102 @@ Currently, the command works as an alias for the `yarn run lint` command.
 - `.yarnrc.yml`
 - `yarn.lock`
 
-### 2. Apply the following patch to `package.json`
+### 2. Apply the following patches
+
+```diff
+--- a/.github/dependabot.yml
++++ b/.github/dependabot.yml
+@@ -3,7 +3,7 @@ updates:
+   - directory: /
+     labels:
+       - dependencies
+-    package-ecosystem: yarn
++    package-ecosystem: npm
+     reviewers:
+       - kurone-kito
+     assignees:
+```
+
+```diff
+--- a/.github/workflows/push.yml
++++ b/.github/workflows/push.yml
+@@ -13,16 +13,14 @@ jobs:
+       - name: Prepare the Node.js version ${{ matrix.node-version }} environment
+         uses: actions/setup-node@v2
+         with:
+-          cache: ${{ !env.ACT && 'yarn' || '' }}
++          cache: ${{ !env.ACT && 'npm' || '' }}
+           node-version: ${{ matrix.node-version }}
+-      - name: Install the Yarn
+-        run: npm install --global yarn@berry
++      - name: set npm config
++        run: npm config set unsafe-perm true
+       - env:
+           HUSKY: 0
+         name: Install the dependencies
+-        run: yarn install --inline-builds
++        run: npm ci
+       - name: Run the tests
+-        run: yarn run test
++        run: npm test
+     strategy:
+       matrix:
+         node-version:
+```
+
+```diff
+--- a/.husky/commit-msg
++++ b/.husky/commit-msg
+@@ -4,4 +4,4 @@
+
+ . "$(dirname "$0")/_/husky.sh"
+
+-yarn exec commitlint --edit "${1}"
++npx --no-install commitlint --edit "${1}"
+```
+
+```diff
+--- a/.husky/pre-commit
++++ b/.husky/pre-commit
+@@ -4,4 +4,4 @@
+
+ . "$(dirname "$0")/_/husky.sh"
+
+-yarn exec pretty-quick --staged
++npx --no-install pretty-quick --staged
+```
+
+```diff
+--- a/.vim/coc-settings.json
++++ b/.vim/coc-settings.json
+@@ -1,6 +1,4 @@
+ {
+-  "eslint.nodePath": ".yarn/sdks",
+-  "eslint.packageManager": "yarn",
+-  "tsserver.tsdk": ".yarn/sdks/typescript/lib",
++  "tsserver.tsdk": "node_modules/typescript/lib",
+   "workspace.workspaceFolderCheckCwd": false
+ }
+```
+
+```diff
+--- a/.vscode/settings.json
++++ b/.vscode/settings.json
+@@ -11,12 +11,6 @@
+     "yarn.lock"
+   ],
+   "cSpell.words": ["kito", "kurone", "kuroné", "tsbuildinfo"],
+-  "eslint.nodePath": ".yarn/sdks",
+-  "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
+-  "search.exclude": {
+-    "**/.pnp.*": true,
+-    "**/.yarn": true
+-  },
+   "typescript.enablePromptUseWorkspaceTsdk": true,
+-  "typescript.tsdk": ".yarn/sdks/typescript/lib"
++  "typescript.tsdk": "node_modules/typescript/lib"
+ }
+```
 
 ```diff
 --- a/package.json
