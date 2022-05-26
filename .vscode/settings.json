@@ -10,7 +10,7 @@
     "vscode-extension",
     "yarn.lock"
   ],
-  "cSpell.words": ["Kito", "Kuroné", "kurone-kito"],
+  "cSpell.words": ["kito", "kurone", "kuroné"],
   "eslint.nodePath": ".yarn/sdks",
   "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
   "search.exclude": {
