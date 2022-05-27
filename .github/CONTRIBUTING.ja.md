@@ -1,6 +1,8 @@
 # プロジェクトへの貢献
 
-Language: [🇬🇧](./CONTRIBUTING.md) | 🇯🇵 | [🇨🇳](./CONTRIBUTING.zh.md)
+Language: [🇬🇧](./CONTRIBUTING.md) | **🇯🇵** | [🇨🇳](./CONTRIBUTING.zh.md)
+
+---
 
 このリポジトリに貢献する際には、変更を加える前に、このリポジトリの所有者と
 [Issues](https://github.com/kurone-kito/yarn-project-boilerplate/issues)
