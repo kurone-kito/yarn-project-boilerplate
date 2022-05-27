@@ -13,7 +13,7 @@
 
 ## System Requirements
 
-- Node.js Fermium LTS (`^14.19.2`)
+- Node.js Fermium LTS (`^14.19.3`)
 - Yarn (`>=2.4.3`)
 
 ## Install the dependencies
@@ -179,9 +179,9 @@ Currently, the command works as an alias for the `yarn run lint` command.
    },
 -  "packageManager": "yarn@3.2.1",
    "engines": {
--    "node": ">=14.19.2",
+     "node": ">=14.19.3",
 -    "yarn": ">=2.4.3"
-+    "node": ">=14.19.2"
++    "node": ">=14.19.3"
    },
    "publishConfig": {
      "access": "public"
