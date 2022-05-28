@@ -37,6 +37,12 @@ yarn run test
 
 Currently, the command works as an alias for the `yarn run lint` command.
 
+## Cleaning
+
+```sh
+yarn run clean
+```
+
 ## Migrate to NPM
 
 ### 1. Remove following files
@@ -153,7 +159,7 @@ Currently, the command works as an alias for the `yarn run lint` command.
 -    "lint": "concurrently -m 1 \"yarn:lint:*:check\"",
 +    "prepare": "husky install",
 +    "lint": "concurrently -m 1 \"npm:lint:*:check\"",
-     "lint:eslint:check": "eslint --cache --format codeframe \"$@\" \"./**/*\"",
+     "lint:eslint:check": "eslint --cache --format codeframe \"./**/*\"",
 -    "lint:eslint:fix": "yarn run lint:eslint:check --fix",
 -    "lint:fix": "concurrently -m 1 \"yarn:lint:*:fix\"",
 +    "lint:eslint:fix": "npm run lint:eslint:check --fix",
