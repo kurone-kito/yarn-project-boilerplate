@@ -185,9 +185,9 @@ yarn run clean
    },
 -  "packageManager": "yarn@3.2.1",
    "engines": {
-     "node": ">=14.19.3",
+     "node": ">=14.19",
 -    "yarn": ">=2.4.3"
-+    "node": ">=14.19.3"
++    "node": ">=14.19"
    },
    "publishConfig": {
      "access": "public"
