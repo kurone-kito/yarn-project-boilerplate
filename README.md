@@ -164,8 +164,8 @@ yarn run clean
 -    "lint:fix": "concurrently -m 1 \"yarn:lint:*:fix\"",
 +    "lint:eslint:fix": "npm run lint:eslint:check --fix",
 +    "lint:fix": "concurrently -m 1 \"npm:lint:*:fix\"",
-     "lint:prettier:check": "prettier --check \"./**/*\"",
-     "lint:prettier:fix": "prettier --write \"./**/*\"",
+     "lint:prettier:check": "prettier --loglevel=warn --check \"./**/*\"",
+     "lint:prettier:fix": "prettier --loglevel=warn --write \"./**/*\"",
 -    "test": "yarn run lint"
 +    "test": "npm run lint"
    },

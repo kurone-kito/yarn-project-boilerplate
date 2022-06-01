@@ -19,8 +19,8 @@
     "lint:eslint:check": "eslint --cache --format codeframe \"./**/*\"",
     "lint:eslint:fix": "yarn run lint:eslint:check --fix",
     "lint:fix": "concurrently -m 1 \"yarn:lint:*:fix\"",
-    "lint:prettier:check": "prettier --check \"./**/*\"",
-    "lint:prettier:fix": "prettier --write \"./**/*\"",
+    "lint:prettier:check": "prettier --loglevel=warn --check \"./**/*\"",
+    "lint:prettier:fix": "prettier --loglevel=warn --write \"./**/*\"",
     "test": "yarn run lint"
   },
   "devDependencies": {
