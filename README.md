@@ -164,8 +164,8 @@ yarn run clean
 -    "lint:fix": "concurrently -m 1 \"yarn:lint:*:fix\"",
 +    "lint:eslint:fix": "npm run lint:eslint:check --fix",
 +    "lint:fix": "concurrently -m 1 \"npm:lint:*:fix\"",
-     "lint:prettier:check": "prettier --check \"./**/*\"",
-     "lint:prettier:fix": "prettier --write \"./**/*\"",
+     "lint:prettier:check": "prettier --loglevel=warn --check \"./**/*\"",
+     "lint:prettier:fix": "prettier --loglevel=warn --write \"./**/*\"",
 -    "test": "yarn run lint"
 +    "test": "npm run lint"
    },
@@ -185,9 +185,9 @@ yarn run clean
    },
 -  "packageManager": "yarn@3.2.1",
    "engines": {
-     "node": ">=14.19.3",
+     "node": ">=14.19",
 -    "yarn": ">=2.4.3"
-+    "node": ">=14.19.3"
++    "node": ">=14.19"
    },
    "publishConfig": {
      "access": "public"
