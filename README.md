@@ -54,20 +54,6 @@ yarn run clean
 ### 2. Apply the following patches
 
 ```diff
---- a/.github/dependabot.yml
-+++ b/.github/dependabot.yml
-@@ -3,7 +3,7 @@ updates:
-   - directory: /
-     labels:
-       - dependencies
--    package-ecosystem: yarn
-+    package-ecosystem: npm
-     reviewers:
-       - kurone-kito
-     assignees:
-```
-
-```diff
 --- a/.github/workflows/push.yml
 +++ b/.github/workflows/push.yml
 @@ -13,16 +13,14 @@ jobs:
