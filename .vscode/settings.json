@@ -12,6 +12,12 @@
   ],
   "cSpell.words": ["kito", "kurone", "kuroné", "tsbuildinfo"],
   "eslint.nodePath": ".yarn/sdks",
+  "files.watcherExclude": {
+    "**/.eslintcache": true,
+    "**/.pnp.*": true,
+    "**/.yarn/cache/**": true,
+    "**/.yarn/unplugged/**": true
+  },
   "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
   "search.exclude": {
     "**/.pnp.*": true,

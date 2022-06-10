@@ -118,16 +118,30 @@ yarn run clean
 ```diff
 --- a/.vscode/settings.json
 +++ b/.vscode/settings.json
-@@ -11,12 +11,6 @@
-     "yarn.lock"
+@@ -5,24 +5,13 @@
+     ".github/CODE_OF_CONDUCT.*",
+     ".vscode",
+     ".vscode-insiders",
+-    ".yarn",
+     "node_modules",
+-    "vscode-extension",
+-    "yarn.lock"
++    "vscode-extension"
    ],
    "cSpell.words": ["kito", "kurone", "kuroné", "tsbuildinfo"],
 -  "eslint.nodePath": ".yarn/sdks",
+   "files.watcherExclude": {
+-    "**/.eslintcache": true,
+-    "**/.pnp.*": true,
+-    "**/.yarn/cache/**": true,
+-    "**/.yarn/unplugged/**": true
+-  },
 -  "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
 -  "search.exclude": {
 -    "**/.pnp.*": true,
 -    "**/.yarn": true
--  },
++    "**/.eslintcache": true
+   },
    "typescript.enablePromptUseWorkspaceTsdk": true,
 -  "typescript.tsdk": ".yarn/sdks/typescript/lib"
 +  "typescript.tsdk": "node_modules/typescript/lib"
