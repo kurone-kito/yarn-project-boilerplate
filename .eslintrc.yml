@@ -14,7 +14,7 @@ extends:
   # Because we want to apply the Airbnb rules as much as possible,
   # we have placed them closer to the end.
   - airbnb-typescript/base
-  - plugin:prettier/recommended
+  - prettier
 overrides:
   - files:
       - '*.?(c)js'
@@ -29,12 +29,6 @@ parser: '@typescript-eslint/parser'
 parserOptions:
   ecmaFeatures:
     impliedStrict: true
-  extraFileExtensions:
-    - '.cjs'
-    - '.cts'
-    - '.mjs'
-    - '.mts'
-    - '.json'
   project:
     - './tsconfig.json'
   sourceType: module
