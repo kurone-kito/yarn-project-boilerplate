@@ -13,7 +13,7 @@
 
 ## System Requirements
 
-- Node.js Fermium LTS (`^14.19.3`)
+- Node.js Fermium LTS (`^14.20.0`)
 - Yarn (`>=2.4.3`)
 
 ## Install the dependencies
@@ -185,9 +185,9 @@ yarn run clean
    },
 -  "packageManager": "yarn@3.2.1",
    "engines": {
-     "node": ">=14.19",
+     "node": ">=14.20",
 -    "yarn": ">=2.4.3"
-+    "node": ">=14.19"
++    "node": ">=14.20"
    },
    "publishConfig": {
      "access": "public"
