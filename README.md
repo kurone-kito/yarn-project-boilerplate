@@ -151,27 +151,30 @@ yarn run clean
 ```diff
 --- a/package.json
 +++ b/package.json
-@@ -12,14 +12,14 @@
-   "author": "kurone-kito <krone@kit.black> (https://kit.black/)",
+@@ -14,15 +14,15 @@
    "files": [],
    "scripts": {
+     "clean": "rimraf \".eslintcache\" \"*.tgz\" \"*.tsbuildinfo\"",
 -    "postinstall": "husky install",
 -    "lint": "concurrently -m 1 \"yarn:lint:*:check\"",
-+    "prepare": "husky install",
 +    "lint": "concurrently -m 1 \"npm:lint:*:check\"",
-     "lint:eslint:check": "eslint --cache --format codeframe \"./**/*\"",
+     "lint:eslint:check": "eslint --cache --cache-strategy=content -f codeframe \"./**/*\"",
 -    "lint:eslint:fix": "yarn run lint:eslint:check --fix",
 -    "lint:fix": "concurrently -m 1 \"yarn:lint:*:fix\"",
+-    "lint:prettier:check": "yarn run prettier -cu",
+-    "lint:prettier:fix": "yarn run prettier -uw",
 +    "lint:eslint:fix": "npm run lint:eslint:check --fix",
 +    "lint:fix": "concurrently -m 1 \"npm:lint:*:fix\"",
-     "lint:prettier:check": "prettier --loglevel=warn --check \"./**/*\"",
-     "lint:prettier:fix": "prettier --loglevel=warn --write \"./**/*\"",
++    "lint:prettier:check": "npm run prettier -cu",
++    "lint:prettier:fix": "npm run prettier -uw",
++    "prepare": "husky install",
+     "prettier": "prettier --cache --loglevel=warn \"$@\" \"./**/*\"",
 -    "test": "yarn run lint"
 +    "test": "npm run lint"
    },
    "devDependencies": {
      "@commitlint/cli": "^17.0.3",
-@@ -27,7 +27,6 @@
+@@ -30,7 +30,6 @@
      "@types/eslint": "^8.4.6",
      "@typescript-eslint/eslint-plugin": "^5.34.0",
      "@typescript-eslint/parser": "^5.34.0",
@@ -179,7 +182,7 @@ yarn run clean
      "concurrently": "^7.3.0",
      "eslint": "^8.22.0",
      "eslint-config-airbnb-typescript": "^17.0.0",
-@@ -51,10 +50,8 @@
+@@ -54,10 +53,8 @@
      "typescript": "~4.7.4",
      "typescript-eslint-language-service": "^5.0.0"
    },
