@@ -13,7 +13,7 @@
 
 ## System Requirements
 
-- Node.js Fermium LTS (`^14.19.3`)
+- Node.js Fermium LTS (`^14.20.0`)
 - Yarn (`>=2.4.3`)
 
 ## Install the dependencies
@@ -52,20 +52,6 @@ yarn run clean
 - `yarn.lock`
 
 ### 2. Apply the following patches
-
-```diff
---- a/.github/dependabot.yml
-+++ b/.github/dependabot.yml
-@@ -3,7 +3,7 @@ updates:
-   - directory: /
-     labels:
-       - dependencies
--    package-ecosystem: yarn
-+    package-ecosystem: npm
-     reviewers:
-       - kurone-kito
-     assignees:
-```
 
 ```diff
 --- a/.github/workflows/push.yml
@@ -132,16 +118,30 @@ yarn run clean
 ```diff
 --- a/.vscode/settings.json
 +++ b/.vscode/settings.json
-@@ -11,12 +11,6 @@
-     "yarn.lock"
+@@ -5,24 +5,13 @@
+     ".github/CODE_OF_CONDUCT.*",
+     ".vscode",
+     ".vscode-insiders",
+-    ".yarn",
+     "node_modules",
+-    "vscode-extension",
+-    "yarn.lock"
++    "vscode-extension"
    ],
    "cSpell.words": ["kito", "kurone", "kuroné", "tsbuildinfo"],
 -  "eslint.nodePath": ".yarn/sdks",
+   "files.watcherExclude": {
+-    "**/.eslintcache": true,
+-    "**/.pnp.*": true,
+-    "**/.yarn/cache/**": true,
+-    "**/.yarn/unplugged/**": true
+-  },
 -  "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
 -  "search.exclude": {
 -    "**/.pnp.*": true,
 -    "**/.yarn": true
--  },
++    "**/.eslintcache": true
+   },
    "typescript.enablePromptUseWorkspaceTsdk": true,
 -  "typescript.tsdk": ".yarn/sdks/typescript/lib"
 +  "typescript.tsdk": "node_modules/typescript/lib"
@@ -151,43 +151,46 @@ yarn run clean
 ```diff
 --- a/package.json
 +++ b/package.json
-@@ -12,14 +12,14 @@
-   "author": "kurone-kito <krone@kit.black> (https://kit.black/)",
+@@ -14,15 +14,15 @@
    "files": [],
    "scripts": {
+     "clean": "rimraf \".eslintcache\" \"*.tgz\" \"*.tsbuildinfo\"",
 -    "postinstall": "husky install",
 -    "lint": "concurrently -m 1 \"yarn:lint:*:check\"",
-+    "prepare": "husky install",
 +    "lint": "concurrently -m 1 \"npm:lint:*:check\"",
-     "lint:eslint:check": "eslint --cache --format codeframe \"./**/*\"",
+     "lint:eslint:check": "eslint --cache --cache-strategy=content -f codeframe \"./**/*\"",
 -    "lint:eslint:fix": "yarn run lint:eslint:check --fix",
 -    "lint:fix": "concurrently -m 1 \"yarn:lint:*:fix\"",
+-    "lint:prettier:check": "yarn run prettier -cu",
+-    "lint:prettier:fix": "yarn run prettier -uw",
 +    "lint:eslint:fix": "npm run lint:eslint:check --fix",
 +    "lint:fix": "concurrently -m 1 \"npm:lint:*:fix\"",
-     "lint:prettier:check": "prettier --loglevel=warn --check \"./**/*\"",
-     "lint:prettier:fix": "prettier --loglevel=warn --write \"./**/*\"",
++    "lint:prettier:check": "npm run prettier -cu",
++    "lint:prettier:fix": "npm run prettier -uw",
++    "prepare": "husky install",
+     "prettier": "prettier --cache --loglevel=warn \"$@\" \"./**/*\"",
 -    "test": "yarn run lint"
 +    "test": "npm run lint"
    },
    "devDependencies": {
-     "@commitlint/cli": "^17.0.0",
-@@ -27,7 +27,6 @@
-     "@types/eslint": "^8.4.2",
-     "@typescript-eslint/eslint-plugin": "^5.24.0",
-     "@typescript-eslint/parser": "^5.24.0",
--    "@yarnpkg/sdks": "^3.0.0-rc.6",
-     "concurrently": "^7.2.0",
-     "eslint": "^8.15.0",
+     "@commitlint/cli": "^17.0.3",
+@@ -30,7 +30,6 @@
+     "@types/eslint": "^8.4.6",
+     "@typescript-eslint/eslint-plugin": "^5.34.0",
+     "@typescript-eslint/parser": "^5.34.0",
+-    "@yarnpkg/sdks": "^3.0.0-rc.14",
+     "concurrently": "^7.3.0",
+     "eslint": "^8.22.0",
      "eslint-config-airbnb-typescript": "^17.0.0",
-@@ -51,10 +50,8 @@
-     "typescript": "^4.6.4",
+@@ -54,10 +53,8 @@
+     "typescript": "~4.7.4",
      "typescript-eslint-language-service": "^5.0.0"
    },
--  "packageManager": "yarn@3.2.1",
+-  "packageManager": "yarn@3.2.2",
    "engines": {
-     "node": ">=14.19",
+-    "node": ">=14.20",
 -    "yarn": ">=2.4.3"
-+    "node": ">=14.19"
++    "node": ">=14.20"
    },
    "publishConfig": {
      "access": "public"
