@@ -163,13 +163,14 @@ yarn run clean
 -    "lint:fix": "concurrently -m 1 \"yarn:lint:*:fix\"",
 -    "lint:prettier:check": "yarn run prettier -cu",
 -    "lint:prettier:fix": "yarn run prettier -uw",
-+    "lint:eslint:fix": "npm run lint:eslint:check --fix",
-+    "lint:fix": "concurrently -m 1 \"npm:lint:*:fix\"",
-+    "lint:prettier:check": "npm run prettier -cu",
-+    "lint:prettier:fix": "npm run prettier -uw",
-+    "prepare": "husky install",
-     "prettier": "prettier --cache --loglevel=warn \"$@\" \"./**/*\"",
+-    "prettier": "prettier --cache --loglevel=warn \"$@\" \"./**/*\"",
 -    "test": "yarn run lint"
++    "lint:eslint:fix": "npm run lint:eslint:check -- --fix",
++    "lint:fix": "concurrently -m 1 \"npm:lint:*:fix\"",
++    "lint:prettier:check": "npm run prettier -- -cu",
++    "lint:prettier:fix": "npm run prettier -- -uw",
++    "prepare": "husky install",
++    "prettier": "prettier --cache --loglevel=warn \"./**/*\"",
 +    "test": "npm run lint"
    },
    "devDependencies": {
