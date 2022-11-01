@@ -29,7 +29,7 @@
     "@commitlint/config-conventional": "^17.1.0",
     "@types/eslint": "^8.4.8",
     "@typescript-eslint/eslint-plugin": "^5.41.0",
-    "@typescript-eslint/parser": "^5.41.0",
+    "@typescript-eslint/parser": "^5.42.0",
     "@yarnpkg/sdks": "^3.0.0-rc.26",
     "concurrently": "^7.5.0",
     "eslint": "^8.26.0",
