@@ -40,7 +40,7 @@
     "eslint-import-resolver-typescript": "^3.5.2",
     "eslint-plugin-editorconfig": "^4.0.2",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsdoc": "^39.3.25",
+    "eslint-plugin-jsdoc": "^39.4.0",
     "eslint-plugin-lodash": "^7.4.0",
     "eslint-plugin-markdown": "^3.0.0",
     "eslint-plugin-yaml": "^0.5.0",
