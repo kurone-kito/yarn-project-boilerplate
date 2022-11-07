@@ -13,7 +13,7 @@
 
 ## System Requirements
 
-- Node.js Fermium LTS (`^14.20.1`)
+- Node.js Fermium LTS (`^14.21.1`)
 - Yarn (`>=2.4.3`)
 
 ## Install the dependencies
