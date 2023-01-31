@@ -9,6 +9,7 @@
   "homepage": "https://github.com/kurone-kito/yarn-project-boilerplate#readme",
   "bugs": "https://github.com/kurone-kito/yarn-project-boilerplate/issues",
   "repository": "github:kurone-kito/yarn-project-boilerplate",
+  "license": "MIT",
   "author": "kurone-kito <krone@kit.black> (https://kit.black/)",
   "type": "module",
   "files": [],
