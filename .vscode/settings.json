@@ -1,16 +1,4 @@
 {
-  "cSpell.ignorePaths": [
-    ".*rc.*",
-    ".git/objects",
-    ".github/CODE_OF_CONDUCT.*",
-    ".vscode",
-    ".vscode-insiders",
-    ".yarn",
-    "node_modules",
-    "vscode-extension",
-    "yarn.lock"
-  ],
-  "cSpell.words": ["kito", "kurone", "kuroné", "tsbuildinfo"],
   "eslint.nodePath": ".yarn/sdks",
   "files.watcherExclude": {
     "**/.eslintcache": true,
@@ -18,6 +6,12 @@
     "**/.yarn/cache/**": true,
     "**/.yarn/unplugged/**": true
   },
+  "json.schemas": [
+    {
+      "fileMatch": [".cspell.yml"],
+      "url": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/packages/cspell-types/cspell.schema.json"
+    }
+  ],
   "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
   "search.exclude": {
     "**/.pnp.*": true,
