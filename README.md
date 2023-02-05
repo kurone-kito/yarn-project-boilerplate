@@ -200,7 +200,7 @@ yarn run clean
      "typescript": "~4.7.4",
      "typescript-eslint-language-service": "^5.0.0"
    },
--  "packageManager": "yarn@3.2.2",
+-  "packageManager": "yarn@3.4.1",
    "engines": {
 -    "node": ">=14.20",
 -    "yarn": ">=2.4.3"
