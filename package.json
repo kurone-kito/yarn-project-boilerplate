@@ -57,7 +57,7 @@
   },
   "packageManager": "yarn@3.4.1",
   "engines": {
-    "node": ">=14.20",
+    "node": ">=14.21",
     "yarn": ">=2.4.3"
   },
   "publishConfig": {
