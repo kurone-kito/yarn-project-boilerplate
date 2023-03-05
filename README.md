@@ -187,17 +187,17 @@ yarn run clean
 +    "test": "npm run lint"
    },
    "devDependencies": {
-     "@commitlint/cli": "^17.0.3",
+     "@commitlint/cli": "^17.4.4",
 @@ -30,7 +30,6 @@
-     "@types/eslint": "^8.4.6",
-     "@typescript-eslint/eslint-plugin": "^5.34.0",
-     "@typescript-eslint/parser": "^5.34.0",
--    "@yarnpkg/sdks": "^3.0.0-rc.14",
-     "concurrently": "^7.3.0",
-     "eslint": "^8.22.0",
+     "@cspell/eslint-plugin": "^6.28.0",
+     "@typescript-eslint/eslint-plugin": "^5.54.0",
+     "@typescript-eslint/parser": "^5.54.0",
+-    "@yarnpkg/sdks": "^3.0.0-rc.40",
+     "concurrently": "^7.6.0",
+     "eslint": "^8.35.0",
      "eslint-config-airbnb-typescript": "^17.0.0",
 @@ -54,10 +53,8 @@
-     "typescript": "~4.7.4",
+     "typescript": "~4.9.5",
      "typescript-eslint-language-service": "^5.0.0"
    },
 -  "packageManager": "yarn@3.4.1",
