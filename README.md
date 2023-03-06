@@ -13,7 +13,7 @@
 
 ## System Requirements
 
-- Node.js Fermium LTS (`^14.21.1`)
+- Node.js Fermium LTS (`^14.21.3`)
 - Yarn (`>=2.4.3`)
 
 ## Install the dependencies
@@ -118,34 +118,47 @@ yarn run clean
 ```diff
 --- a/.vscode/settings.json
 +++ b/.vscode/settings.json
-@@ -5,24 +5,13 @@
-     ".github/CODE_OF_CONDUCT.*",
-     ".vscode",
-     ".vscode-insiders",
--    ".yarn",
-     "node_modules",
--    "vscode-extension",
--    "yarn.lock"
-+    "vscode-extension"
-   ],
-   "cSpell.words": ["kito", "kurone", "kuroné", "tsbuildinfo"],
+@@ -1,10 +1,6 @@
+ {
 -  "eslint.nodePath": ".yarn/sdks",
    "files.watcherExclude": {
 -    "**/.eslintcache": true,
 -    "**/.pnp.*": true,
 -    "**/.yarn/cache/**": true,
 -    "**/.yarn/unplugged/**": true
--  },
++    "**/.eslintcache": true
+   },
+   "json.schemas": [
+     {
+@@ -12,11 +8,6 @@
+       "url": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/packages/cspell-types/cspell.schema.json"
+     }
+   ],
 -  "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
 -  "search.exclude": {
 -    "**/.pnp.*": true,
 -    "**/.yarn": true
-+    "**/.eslintcache": true
-   },
+-  },
    "typescript.enablePromptUseWorkspaceTsdk": true,
 -  "typescript.tsdk": ".yarn/sdks/typescript/lib"
 +  "typescript.tsdk": "node_modules/typescript/lib"
  }
+```
+
+```diff
+--- a/cspell.config.yml
++++ b/cspell.config.yml
+@@ -15,10 +15,8 @@ ignorePaths:
+   - .git/objects
+   - .github/CODE_OF_CONDUCT.*
+   - .vscode
+-  - .yarn
+   - cspell.config.yml
+   - node_modules
+-  - yarn.lock
+ ignoreWords:
+   - kito
+   - kurone
 ```
 
 ```diff
@@ -154,19 +167,19 @@ yarn run clean
 @@ -14,15 +14,15 @@
    "files": [],
    "scripts": {
-     "clean": "rimraf \".eslintcache\" \"*.tgz\" \"*.tsbuildinfo\"",
+     "clean": "rimraf -g \".eslintcache\" \"*.tgz\" \"*.tsbuildinfo\"",
 -    "postinstall": "husky install",
--    "lint": "concurrently -m 1 \"yarn:lint:*:check\"",
-+    "lint": "concurrently -m 1 \"npm:lint:*:check\"",
+-    "lint": "conc -m 1 \"yarn:lint:*:check\"",
++    "lint": "conc -m 1 \"npm:lint:*:check\"",
      "lint:eslint:check": "eslint --cache --cache-strategy=content -f codeframe \"./**/*\"",
 -    "lint:eslint:fix": "yarn run lint:eslint:check --fix",
--    "lint:fix": "concurrently -m 1 \"yarn:lint:*:fix\"",
+-    "lint:fix": "conc -m 1 \"yarn:lint:*:fix\"",
 -    "lint:prettier:check": "yarn run prettier -cu",
 -    "lint:prettier:fix": "yarn run prettier -uw",
 -    "prettier": "prettier --cache --loglevel=warn \"$@\" \"./**/*\"",
 -    "test": "yarn run lint"
 +    "lint:eslint:fix": "npm run lint:eslint:check -- --fix",
-+    "lint:fix": "concurrently -m 1 \"npm:lint:*:fix\"",
++    "lint:fix": "conc -m 1 \"npm:lint:*:fix\"",
 +    "lint:prettier:check": "npm run prettier -- -cu",
 +    "lint:prettier:fix": "npm run prettier -- -uw",
 +    "prepare": "husky install",
@@ -174,24 +187,24 @@ yarn run clean
 +    "test": "npm run lint"
    },
    "devDependencies": {
-     "@commitlint/cli": "^17.0.3",
+     "@commitlint/cli": "^17.4.4",
 @@ -30,7 +30,6 @@
-     "@types/eslint": "^8.4.6",
-     "@typescript-eslint/eslint-plugin": "^5.34.0",
-     "@typescript-eslint/parser": "^5.34.0",
--    "@yarnpkg/sdks": "^3.0.0-rc.14",
-     "concurrently": "^7.3.0",
-     "eslint": "^8.22.0",
+     "@cspell/eslint-plugin": "^6.28.0",
+     "@typescript-eslint/eslint-plugin": "^5.54.0",
+     "@typescript-eslint/parser": "^5.54.0",
+-    "@yarnpkg/sdks": "^3.0.0-rc.40",
+     "concurrently": "^7.6.0",
+     "eslint": "^8.35.0",
      "eslint-config-airbnb-typescript": "^17.0.0",
 @@ -54,10 +53,8 @@
-     "typescript": "~4.7.4",
+     "typescript": "~4.9.5",
      "typescript-eslint-language-service": "^5.0.0"
    },
--  "packageManager": "yarn@3.2.2",
+-  "packageManager": "yarn@3.4.1",
    "engines": {
--    "node": ">=14.20",
+-    "node": ">=14.21",
 -    "yarn": ">=2.4.3"
-+    "node": ">=14.20"
++    "node": ">=14.21"
    },
    "publishConfig": {
      "access": "public"

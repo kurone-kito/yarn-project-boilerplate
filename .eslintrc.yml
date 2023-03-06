@@ -5,6 +5,7 @@ extends:
   - plugin:markdown/recommended
   - plugin:yaml/recommended
   - plugin:editorconfig/noconflict
+  - plugin:@cspell/recommended
   - plugin:jsdoc/recommended
   - plugin:lodash/recommended
   - eslint:recommended
