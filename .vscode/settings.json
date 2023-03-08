@@ -1,5 +1,6 @@
 {
   "eslint.nodePath": ".yarn/sdks",
+  "eslint.packageManager": "yarn",
   "files.watcherExclude": {
     "**/.eslintcache": true,
     "**/.pnp.*": true,
