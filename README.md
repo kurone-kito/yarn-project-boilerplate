@@ -118,9 +118,10 @@ yarn run clean
 ```diff
 --- a/.vscode/settings.json
 +++ b/.vscode/settings.json
-@@ -1,10 +1,6 @@
+@@ -1,11 +1,6 @@
  {
 -  "eslint.nodePath": ".yarn/sdks",
+-  "eslint.packageManager": "yarn",
    "files.watcherExclude": {
 -    "**/.eslintcache": true,
 -    "**/.pnp.*": true,
@@ -130,7 +131,7 @@ yarn run clean
    },
    "json.schemas": [
      {
-@@ -12,11 +8,6 @@
+@@ -13,11 +8,6 @@
        "url": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/packages/cspell-types/cspell.schema.json"
      }
    ],
