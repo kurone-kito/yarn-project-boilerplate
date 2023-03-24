@@ -188,16 +188,15 @@ yarn run clean
 +    "test": "npm run lint"
    },
    "devDependencies": {
-     "@commitlint/cli": "^17.4.4",
-@@ -30,7 +30,6 @@
-     "@cspell/eslint-plugin": "^6.28.0",
+@@ -34,7 +34,6 @@
+     "@kurone-kito/typescript-config": "^0.1.2",
      "@typescript-eslint/eslint-plugin": "^5.56.0",
      "@typescript-eslint/parser": "^5.56.0",
 -    "@yarnpkg/sdks": "^3.0.0-rc.40",
      "concurrently": "^7.6.0",
      "eslint": "^8.36.0",
      "eslint-config-airbnb-typescript": "^17.0.0",
-@@ -54,10 +53,8 @@
+@@ -59,10 +58,8 @@
      "typescript": "~5.0.2",
      "typescript-eslint-language-service": "^5.0.0"
    },
