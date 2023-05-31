@@ -88,7 +88,7 @@ yarn run clean
  . "$(dirname "$0")/_/husky.sh"
 
 -yarn exec commitlint --edit "${1}"
-+npx --no-install commitlint --edit "${1}"
++npm x --no -- commitlint --edit "${1}"
 ```
 
 ```diff
@@ -99,7 +99,7 @@ yarn run clean
  . "$(dirname "$0")/_/husky.sh"
 
 -yarn exec pretty-quick --staged
-+npx --no-install pretty-quick --staged
++npm x --no -- pretty-quick --staged
 ```
 
 ```diff
