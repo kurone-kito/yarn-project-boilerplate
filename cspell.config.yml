@@ -3,13 +3,18 @@ cache:
   cacheLocation: node_modules/.cache/cspell/.cspell.cache
   cacheStrategy: metadata
   useCache: true
-language: en,eo,ja,lorem,node,npm,typescript
+dictionaries:
+  - cpp
+  - node
+  - npm
+  - typescript
+language: en,eo,ja
 languageSettings:
   - allowCompoundWords: true
     caseSensitive: false
     enabled: true
     languageId: '*'
-    locale: en,ja
+    locale: en,eo,ja
 ignorePaths:
   - .*rc.*
   - .git/objects
@@ -23,6 +28,5 @@ ignoreWords:
   - kito
   - kurone
   - Kuroné
-  - tsbuildinfo
 useGitignore: true
 version: '0.2'
