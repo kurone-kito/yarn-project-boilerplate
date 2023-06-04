@@ -14,7 +14,7 @@
   "type": "module",
   "files": [],
   "scripts": {
-    "clean": "rimraf -g \".eslintcache\" \"*.tgz\" \"*.tsbuildinfo\"",
+    "clean": "rimraf -g \".eslintcache\" \"*.tgz\" \"*.tsbuildinfo\"  \"node_modules/.cache/**/*\"",
     "postinstall": "husky install",
     "lint": "conc -m 1 \"yarn:lint:*:check\"",
     "lint:eslint:check": "eslint --cache --cache-strategy=content -f codeframe \"./**/*\"",
