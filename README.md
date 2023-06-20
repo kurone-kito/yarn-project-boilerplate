@@ -88,7 +88,7 @@ yarn run clean
  . "$(dirname "$0")/_/husky.sh"
 
 -yarn exec commitlint --edit "${1}"
-+npx --no-install commitlint --edit "${1}"
++npm x --no -- commitlint --edit "${1}"
 ```
 
 ```diff
@@ -99,7 +99,7 @@ yarn run clean
  . "$(dirname "$0")/_/husky.sh"
 
 -yarn exec pretty-quick --staged
-+npx --no-install pretty-quick --staged
++npm x --no -- pretty-quick --staged
 ```
 
 ```diff
@@ -190,18 +190,18 @@ yarn run clean
    "prettier": "@kurone-kito/prettier-config",
    "devDependencies": {
 @@ -35,7 +35,6 @@
-     "@kurone-kito/typescript-config": "^0.3.4",
-     "@typescript-eslint/eslint-plugin": "^5.59.5",
-     "@typescript-eslint/parser": "^5.59.5",
--    "@yarnpkg/sdks": "^3.0.0-rc.43",
-     "concurrently": "^8.0.1",
-     "eslint": "^8.40.0",
+     "@kurone-kito/typescript-config": "^0.5.0",
+     "@typescript-eslint/eslint-plugin": "^5.60.0",
+     "@typescript-eslint/parser": "^5.60.0",
+-    "@yarnpkg/sdks": "^3.0.0-rc.45",
+     "concurrently": "^8.2.0",
+     "eslint": "^8.43.0",
      "eslint-config-airbnb-typescript": "^17.0.0",
 @@ -60,10 +59,8 @@
-     "typescript": "~5.0.4",
+     "typescript": "~5.1.3",
      "typescript-eslint-language-service": "^5.0.5"
    },
--  "packageManager": "yarn@3.5.1",
+-  "packageManager": "yarn@3.6.0",
    "engines": {
 -    "node": ">=16.20",
 -    "yarn": ">=2.4.3"
