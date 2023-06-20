@@ -118,10 +118,9 @@ yarn run clean
 ```diff
 --- a/.vscode/settings.json
 +++ b/.vscode/settings.json
-@@ -1,11 +1,6 @@
+@@ -1,18 +1,9 @@
  {
 -  "eslint.nodePath": ".yarn/sdks",
--  "eslint.packageManager": "yarn",
    "files.watcherExclude": {
 -    "**/.eslintcache": true,
 -    "**/.pnp.*": true,
@@ -129,12 +128,6 @@ yarn run clean
 -    "**/.yarn/unplugged/**": true
 +    "**/.eslintcache": true
    },
-   "json.schemas": [
-     {
-@@ -13,11 +8,6 @@
-       "url": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/packages/cspell-types/cspell.schema.json"
-     }
-   ],
 -  "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
 -  "search.exclude": {
 -    "**/.pnp.*": true,
@@ -143,7 +136,9 @@ yarn run clean
    "typescript.enablePromptUseWorkspaceTsdk": true,
 -  "typescript.tsdk": ".yarn/sdks/typescript/lib"
 +  "typescript.tsdk": "node_modules/typescript/lib"
- }
+   "yaml.schemas": {
+     "https://raw.githubusercontent.com/reviewpad/schemas/main/latest/schema.json": [
+       "reviewpad.yml"
 ```
 
 ```diff
