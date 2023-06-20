@@ -147,22 +147,6 @@ yarn run clean
 ```
 
 ```diff
---- a/cspell.config.yml
-+++ b/cspell.config.yml
-@@ -15,10 +15,8 @@ ignorePaths:
-   - .git/objects
-   - .github/CODE_OF_CONDUCT.*
-   - .vscode
--  - .yarn
-   - cspell.config.yml
-   - node_modules
--  - yarn.lock
- ignoreWords:
-   - kito
-   - kurone
-```
-
-```diff
 --- a/package.json
 +++ b/package.json
 @@ -15,15 +15,15 @@
