@@ -4,7 +4,8 @@
   "private": true,
   "description": "The boilerplate project of the Node.js / Yarn",
   "keywords": [
-    "boilerplate"
+    "boilerplate",
+    "template"
   ],
   "homepage": "https://github.com/kurone-kito/yarn-project-boilerplate#readme",
   "bugs": "https://github.com/kurone-kito/yarn-project-boilerplate/issues",
@@ -63,8 +64,7 @@
   },
   "packageManager": "yarn@3.6.0",
   "engines": {
-    "node": ">=16.20",
-    "yarn": ">=2.4.3"
+    "node": ">=16.20"
   },
   "publishConfig": {
     "access": "public"

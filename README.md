@@ -144,7 +144,7 @@ yarn run clean
 ```diff
 --- a/package.json
 +++ b/package.json
-@@ -15,15 +15,15 @@
+@@ -16,15 +16,15 @@
    "files": [],
    "scripts": {
      "clean": "rimraf -g \".eslintcache\" \"*.tgz\" \"*.tsbuildinfo\"",
@@ -168,7 +168,7 @@ yarn run clean
    },
    "prettier": "@kurone-kito/prettier-config",
    "devDependencies": {
-@@ -35,7 +35,6 @@
+@@ -36,7 +36,6 @@
      "@kurone-kito/typescript-config": "^0.5.0",
      "@typescript-eslint/eslint-plugin": "^5.60.0",
      "@typescript-eslint/parser": "^5.60.0",
@@ -176,18 +176,14 @@ yarn run clean
      "concurrently": "^8.2.0",
      "eslint": "^8.43.0",
      "eslint-config-airbnb-typescript": "^17.0.0",
-@@ -60,10 +59,8 @@
+@@ -61,7 +60,6 @@
      "typescript": "~5.1.3",
      "typescript-eslint-language-service": "^5.0.5"
    },
 -  "packageManager": "yarn@3.6.0",
    "engines": {
--    "node": ">=16.20",
--    "yarn": ">=2.4.3"
-+    "node": ">=16.20"
+     "node": ">=16.20"
    },
-   "publishConfig": {
-     "access": "public"
 ```
 
 ### 3. Run the following command
