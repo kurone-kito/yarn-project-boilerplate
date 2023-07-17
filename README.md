@@ -45,7 +45,7 @@ yarn run clean
 
 ## Migrate to NPM
 
-### 1. Remove following files
+### 1. Remove the following files
 
 - `.yarn/`
 - `.yarnrc.yml`
@@ -190,7 +190,7 @@ yarn run clean
      "access": "public"
 ```
 
-### 3. Run following command
+### 3. Run the following command
 
 ```sh
 npm install
@@ -201,7 +201,7 @@ git commit -m "feat: migrate to NPM from Yarn"
 ## Rules for Development
 
 Introduce commit message validation at commit time.
-“**[Conventional Commits](https://www.conventionalcommits.org/ja/)**”
+The “**[Conventional Commits](https://www.conventionalcommits.org/ja/)**”
 rule is applied to discourage committing messages that violate conventions.
 
 ## LICENSE
