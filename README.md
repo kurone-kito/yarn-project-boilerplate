@@ -98,8 +98,8 @@ yarn run clean
 
  . "$(dirname "$0")/_/husky.sh"
 
--yarn exec pretty-quick --staged
-+npm x --no -- pretty-quick --staged
+-yarn exec lint-staged
++npm x --no -- lint-staged
 ```
 
 ```diff
