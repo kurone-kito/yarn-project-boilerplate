@@ -144,13 +144,14 @@ yarn run clean
 ```diff
 --- a/package.json
 +++ b/package.json
-@@ -16,15 +16,15 @@
+@@ -16,16 +16,16 @@
    "files": [],
    "scripts": {
      "clean": "rimraf -g \".eslintcache\" \"*.tgz\" \"*.tsbuildinfo\"",
 -    "postinstall": "husky install",
 -    "lint": "conc -m 1 \"yarn:lint:*:check\"",
 +    "lint": "conc -m 1 \"npm:lint:*:check\"",
+     "lint:cspell:check": "cspell lint --no-progress --show-suggestions -u \"./**/*\"",
      "lint:eslint:check": "eslint --cache --cache-strategy=content -f codeframe \"./**/*\"",
 -    "lint:eslint:fix": "yarn run lint:eslint:check --fix",
 -    "lint:fix": "conc -m 1 \"yarn:lint:*:fix\"",
