@@ -13,7 +13,7 @@
 
 ## System Requirements
 
-- Node.js Gallium LTS (`^16.20.0`)
+- Node.js Gallium LTS (`^16.20.1`)
 - Yarn (`>=2.4.3`)
 
 ## Install the dependencies
@@ -45,7 +45,7 @@ yarn run clean
 
 ## Migrate to NPM
 
-### 1. Remove following files
+### 1. Remove the following files
 
 - `.yarn/`
 - `.yarnrc.yml`
@@ -98,8 +98,8 @@ yarn run clean
 
  . "$(dirname "$0")/_/husky.sh"
 
--yarn exec pretty-quick --staged
-+npm x --no -- pretty-quick --staged
+-yarn exec lint-staged
++npm x --no -- lint-staged
 ```
 
 ```diff
@@ -118,10 +118,9 @@ yarn run clean
 ```diff
 --- a/.vscode/settings.json
 +++ b/.vscode/settings.json
-@@ -1,11 +1,6 @@
+@@ -1,18 +1,9 @@
  {
 -  "eslint.nodePath": ".yarn/sdks",
--  "eslint.packageManager": "yarn",
    "files.watcherExclude": {
 -    "**/.eslintcache": true,
 -    "**/.pnp.*": true,
@@ -129,12 +128,6 @@ yarn run clean
 -    "**/.yarn/unplugged/**": true
 +    "**/.eslintcache": true
    },
-   "json.schemas": [
-     {
-@@ -13,11 +8,6 @@
-       "url": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/packages/cspell-types/cspell.schema.json"
-     }
-   ],
 -  "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
 -  "search.exclude": {
 -    "**/.pnp.*": true,
@@ -143,35 +136,22 @@ yarn run clean
    "typescript.enablePromptUseWorkspaceTsdk": true,
 -  "typescript.tsdk": ".yarn/sdks/typescript/lib"
 +  "typescript.tsdk": "node_modules/typescript/lib"
- }
-```
-
-```diff
---- a/cspell.config.yml
-+++ b/cspell.config.yml
-@@ -15,10 +15,8 @@ ignorePaths:
-   - .git/objects
-   - .github/CODE_OF_CONDUCT.*
-   - .vscode
--  - .yarn
-   - cspell.config.yml
-   - node_modules
--  - yarn.lock
- ignoreWords:
-   - kito
-   - kurone
+   "yaml.schemas": {
+     "https://raw.githubusercontent.com/reviewpad/schemas/main/latest/schema.json": [
+       "reviewpad.yml"
 ```
 
 ```diff
 --- a/package.json
 +++ b/package.json
-@@ -15,15 +15,15 @@
+@@ -16,16 +16,16 @@
    "files": [],
    "scripts": {
      "clean": "rimraf -g \".eslintcache\" \"*.tgz\" \"*.tsbuildinfo\"",
 -    "postinstall": "husky install",
 -    "lint": "conc -m 1 \"yarn:lint:*:check\"",
 +    "lint": "conc -m 1 \"npm:lint:*:check\"",
+     "lint:cspell:check": "cspell lint --no-progress --show-suggestions -u \"./**/*\"",
      "lint:eslint:check": "eslint --cache --cache-strategy=content -f codeframe \"./**/*\"",
 -    "lint:eslint:fix": "yarn run lint:eslint:check --fix",
 -    "lint:fix": "conc -m 1 \"yarn:lint:*:fix\"",
@@ -189,29 +169,25 @@ yarn run clean
    },
    "prettier": "@kurone-kito/prettier-config",
    "devDependencies": {
-@@ -35,7 +35,6 @@
-     "@kurone-kito/typescript-config": "^0.5.0",
-     "@typescript-eslint/eslint-plugin": "^5.60.0",
-     "@typescript-eslint/parser": "^5.60.0",
--    "@yarnpkg/sdks": "^3.0.0-rc.45",
+@@ -36,7 +36,6 @@
+     "@kurone-kito/eslint-config-base": "^0.7.0",
+     "@kurone-kito/prettier-config": "^0.7.0",
+     "@kurone-kito/typescript-config": "^0.7.0",
+-    "@yarnpkg/sdks": "^3.0.0-rc.48",
      "concurrently": "^8.2.0",
-     "eslint": "^8.43.0",
-     "eslint-config-airbnb-typescript": "^17.0.0",
-@@ -60,10 +59,8 @@
-     "typescript": "~5.1.3",
+     "cspell": "^6.31.2",
+     "eslint": "^8.45.0",
+@@ -62,7 +61,6 @@
+     "typescript": "~5.1.6",
      "typescript-eslint-language-service": "^5.0.5"
    },
--  "packageManager": "yarn@3.6.0",
+-  "packageManager": "yarn@3.6.1",
    "engines": {
--    "node": ">=16.20",
--    "yarn": ">=2.4.3"
-+    "node": ">=16.20"
+     "node": ">=16.20"
    },
-   "publishConfig": {
-     "access": "public"
 ```
 
-### 3. Run following command
+### 3. Run the following command
 
 ```sh
 npm install
@@ -222,7 +198,7 @@ git commit -m "feat: migrate to NPM from Yarn"
 ## Rules for Development
 
 Introduce commit message validation at commit time.
-“**[Conventional Commits](https://www.conventionalcommits.org/ja/)**”
+The “**[Conventional Commits](https://www.conventionalcommits.org/ja/)**”
 rule is applied to discourage committing messages that violate conventions.
 
 ## LICENSE
