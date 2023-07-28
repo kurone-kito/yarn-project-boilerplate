@@ -118,24 +118,24 @@ yarn run clean
 ```diff
 --- a/.vscode/settings.json
 +++ b/.vscode/settings.json
-@@ -1,18 +1,9 @@
+@@ -1,5 +1,4 @@
  {
 -  "eslint.nodePath": ".yarn/sdks",
-   "files.watcherExclude": {
--    "**/.eslintcache": true,
--    "**/.pnp.*": true,
--    "**/.yarn/cache/**": true,
--    "**/.yarn/unplugged/**": true
-+    "**/.eslintcache": true
-   },
+   "files.readonlyInclude": {
+     "**/.pnp.*": true,
+     "**/.yarn/**/*": true,
+@@ -13,13 +12,11 @@
+    "**/node_modules/**/*": true
+  },
+  "git.branchProtection": ["main"],
 -  "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
--  "search.exclude": {
--    "**/.pnp.*": true,
--    "**/.yarn": true
--  },
+   "search.exclude": {
+     "**/.pnp.*": true,
+     "**/.yarn": true,
+     "**/node_modules/**/*": true
+   },
    "typescript.enablePromptUseWorkspaceTsdk": true,
--  "typescript.tsdk": ".yarn/sdks/typescript/lib"
-+  "typescript.tsdk": "node_modules/typescript/lib"
+-  "typescript.tsdk": ".yarn/sdks/typescript/lib",
    "yaml.schemas": {
      "https://raw.githubusercontent.com/reviewpad/schemas/main/latest/schema.json": [
        "reviewpad.yml"

@@ -1,15 +1,23 @@
 {
   "eslint.nodePath": ".yarn/sdks",
+  "files.readonlyInclude": {
+    "**/.pnp.*": true,
+    "**/.yarn/**/*": true,
+    "**/node_modules/**/*": true
+  },
   "files.watcherExclude": {
     "**/.eslintcache": true,
     "**/.pnp.*": true,
     "**/.yarn/cache/**": true,
-    "**/.yarn/unplugged/**": true
+    "**/.yarn/unplugged/**": true,
+    "**/node_modules/**/*": true
   },
+  "git.branchProtection": ["main"],
   "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
   "search.exclude": {
     "**/.pnp.*": true,
-    "**/.yarn": true
+    "**/.yarn": true,
+    "**/node_modules/**/*": true
   },
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "typescript.tsdk": ".yarn/sdks/typescript/lib",
