@@ -56,15 +56,15 @@ yarn run clean
 ```diff
 --- a/.github/workflows/push.yml
 +++ b/.github/workflows/push.yml
-@@ -13,16 +13,14 @@ jobs:
+@@ -20,16 +20,18 @@ jobs:
        - name: Prepare the Node.js version ${{ matrix.node-version }} environment
          uses: actions/setup-node@v2
          with:
 -          cache: ${{ !env.ACT && 'yarn' || '' }}
 +          cache: ${{ !env.ACT && 'npm' || '' }}
            node-version: ${{ matrix.node-version }}
--      - name: Install the Yarn
--        run: npm install --global yarn@berry
+       - name: Enable the corepack because of the Yarn 3
+         run: corepack enable
 +      - name: set npm config
 +        run: npm config set unsafe-perm true
        - env:
