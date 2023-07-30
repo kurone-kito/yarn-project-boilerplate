@@ -16,6 +16,7 @@
   "files": [],
   "scripts": {
     "clean": "rimraf -g \".eslintcache\" \"*.tgz\" \"*.tsbuildinfo\"  \"node_modules/.cache/**/*\"",
+    "commit": "aicommits -t conventional",
     "postinstall": "husky install",
     "lint": "conc -m 1 \"yarn:lint:*:check\"",
     "lint:cspell:check": "cspell lint --no-progress --show-suggestions -u \"./**/*\"",
@@ -39,6 +40,7 @@
     "@typescript-eslint/eslint-plugin": "^6.1.0",
     "@typescript-eslint/parser": "^6.1.0",
     "@yarnpkg/sdks": "^3.0.0-rc.48",
+    "aicommits": "^1.11.0",
     "concurrently": "^8.2.0",
     "cspell": "^6.31.2",
     "eslint": "^8.45.0",

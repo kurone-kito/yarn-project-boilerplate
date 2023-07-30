@@ -26,6 +26,7 @@ ignorePaths:
   - node_modules
   - yarn.lock
 ignoreWords:
+  - aicommits
   - kito
   - kurone
   - Kuroné
