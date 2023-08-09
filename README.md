@@ -13,7 +13,7 @@
 
 ## System Requirements
 
-- Node.js Gallium LTS (`^16.20.1`)
+- Node.js Gallium LTS (`^16.20.2`)
 - Yarn (`>=2.4.3`)
 
 ## Install the dependencies
