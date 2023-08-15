@@ -169,15 +169,15 @@ yarn run clean
    },
    "prettier": "@kurone-kito/prettier-config",
    "devDependencies": {
-@@ -36,7 +36,6 @@
-     "@kurone-kito/eslint-config-base": "^0.7.0",
-     "@kurone-kito/prettier-config": "^0.7.0",
-     "@kurone-kito/typescript-config": "^0.7.0",
+@@ -39,7 +39,6 @@
+     "@kurone-kito/typescript-config": "^0.7.3",
+     "@typescript-eslint/eslint-plugin": "^6.4.0",
+     "@typescript-eslint/parser": "^6.4.0",
 -    "@yarnpkg/sdks": "^3.0.0-rc.48",
      "concurrently": "^8.2.0",
      "cspell": "^6.31.2",
      "eslint": "^8.45.0",
-@@ -62,7 +61,6 @@
+@@ -64,7 +63,6 @@
      "typescript": "~5.1.6",
      "typescript-eslint-language-service": "^5.0.5"
    },
