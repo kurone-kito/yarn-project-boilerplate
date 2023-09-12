@@ -147,7 +147,7 @@ yarn run clean
 @@ -16,16 +16,16 @@
    "files": [],
    "scripts": {
-     "clean": "rimraf -g \".eslintcache\" \"*.tgz\" \"*.tsbuildinfo\"",
+     "clean": "rimraf -g .eslintcache \"*.tgz\" \"*.tsbuildinfo\" \"node_modules/.cache/**/*\"",
 -    "postinstall": "husky install",
 -    "lint": "conc -m 1 \"yarn:lint:*:check\"",
 +    "lint": "conc -m 1 \"npm:lint:*:check\"",

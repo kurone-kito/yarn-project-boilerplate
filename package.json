@@ -15,7 +15,7 @@
   "type": "module",
   "files": [],
   "scripts": {
-    "clean": "rimraf -g \".eslintcache\" \"*.tgz\" \"*.tsbuildinfo\"  \"node_modules/.cache/**/*\"",
+    "clean": "rimraf -g .eslintcache \"*.tgz\" \"*.tsbuildinfo\" \"node_modules/.cache/**/*\"",
     "commit": "aicommits -t conventional",
     "postinstall": "husky install",
     "lint": "conc -m 1 \"yarn:lint:*:check\"",
