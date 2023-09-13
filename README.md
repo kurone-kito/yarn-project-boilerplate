@@ -2,14 +2,16 @@
 
 ## Features
 
-- Yarn with PnP
+- Yarn (berry) with PnP
 - TypeScript
 - ESLint
 - Prettier
+- Commitlint with Husky
 - Visual Studio Code / Vim ready
-- CI / CD configurations
+- CI configurations
   - Dependabot
   - GitHub Actions
+  - ReviewPad
 
 ## System Requirements
 
@@ -144,10 +146,9 @@ yarn run clean
 ```diff
 --- a/package.json
 +++ b/package.json
-@@ -16,16 +16,16 @@
-   "files": [],
-   "scripts": {
+@@ -18,15 +18,15 @@
      "clean": "rimraf -g .eslintcache \"*.tgz\" \"*.tsbuildinfo\" \"node_modules/.cache/**/*\"",
+     "commit": "aicommits -t conventional",
 -    "postinstall": "husky install",
 -    "lint": "conc -m 1 \"yarn:lint:*:check\"",
 +    "lint": "conc -m 1 \"npm:lint:*:check\"",
@@ -157,14 +158,14 @@ yarn run clean
 -    "lint:fix": "conc -m 1 \"yarn:lint:*:fix\"",
 -    "lint:prettier:check": "yarn run prettier -cu",
 -    "lint:prettier:fix": "yarn run prettier -uw",
--    "prettier": "prettier --cache --loglevel=warn \"$@\" \"./**/*\"",
+-    "prettier": "prettier --cache --log-level=warn \"$@\" \"./**/*\"",
 -    "test": "yarn run lint"
 +    "lint:eslint:fix": "npm run lint:eslint:check -- --fix",
 +    "lint:fix": "conc -m 1 \"npm:lint:*:fix\"",
 +    "lint:prettier:check": "npm run prettier -- -cu",
 +    "lint:prettier:fix": "npm run prettier -- -uw",
 +    "prepare": "husky install",
-+    "prettier": "prettier --cache --loglevel=warn \"./**/*\"",
++    "prettier": "prettier --cache --log-level=warn \"./**/*\"",
 +    "test": "npm run lint"
    },
    "prettier": "@kurone-kito/prettier-config",
