@@ -15,7 +15,7 @@
 
 ## System Requirements
 
-- Node.js Gallium LTS (`^16.20.2`)
+- Node.js Hydrogen LTS (`^18.19.0`)
 - Yarn (`>=2.4.3`)
 
 ## Install the dependencies
@@ -184,7 +184,7 @@ yarn run clean
    },
 -  "packageManager": "yarn@3.6.1",
    "engines": {
-     "node": ">=16.20"
+     "node": ">=18.19"
    },
 ```
 
