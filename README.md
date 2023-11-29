@@ -16,11 +16,11 @@
 ## System Requirements
 
 - Node.js Hydrogen LTS (`^18.19.0`)
-- Yarn (`>=2.4.3`)
 
 ## Install the dependencies
 
 ```sh
+corepack enable
 yarn install
 ```
 
