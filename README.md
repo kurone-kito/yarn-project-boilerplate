@@ -49,6 +49,7 @@ yarn run clean
 
 ### 1. Remove the following files
 
+- `.gitattributes`
 - `.yarn/`
 - `.yarnrc.yml`
 - `yarn.lock`
@@ -58,17 +59,18 @@ yarn run clean
 ```diff
 --- a/.github/workflows/push.yml
 +++ b/.github/workflows/push.yml
-@@ -20,16 +20,18 @@ jobs:
-       - name: Prepare the Node.js version ${{ matrix.node-version }} environment
-         uses: actions/setup-node@v2
+@@ -21,19 +21,17 @@ jobs:
+         uses: actions/setup-node@v4
+         with:
+           node-version: ${{ matrix.node-version }}
+-      - name: Enable the corepack because of the Yarn berry
+-        run: corepack enable
+       - name: Post-prepare the Node.js version ${{ matrix.node-version }} environment
+         uses: actions/setup-node@v4
          with:
 -          cache: ${{ !env.ACT && 'yarn' || '' }}
 +          cache: ${{ !env.ACT && 'npm' || '' }}
            node-version: ${{ matrix.node-version }}
-       - name: Enable the corepack because of the Yarn 3
-         run: corepack enable
-+      - name: set npm config
-+        run: npm config set unsafe-perm true
        - env:
            HUSKY: 0
          name: Install the dependencies
@@ -182,7 +184,7 @@ yarn run clean
      "typescript": "~5.1.6",
      "typescript-eslint-language-service": "^5.0.5"
    },
--  "packageManager": "yarn@3.6.1",
+-  "packageManager": "yarn@4.0.2",
    "engines": {
      "node": ">=18.19"
    },
