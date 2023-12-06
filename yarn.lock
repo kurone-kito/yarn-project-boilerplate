@@ -829,6 +829,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@kurone-kito/cspell-config@npm:^0.8.4":
+  version: 0.8.4
+  resolution: "@kurone-kito/cspell-config@npm:0.8.4"
+  peerDependenciesMeta:
+    "@cspell/cspell-types":
+      optional: true
+    cspell:
+      optional: true
+  checksum: ec65e5d7425fd8e63764e52f7ff08cd1d6b5c11c1ade1be64672e62285752c1a6a44a199d01cf8a587503ffe3e2a904d12853d047b09a62480f10641617a6d6a
+  languageName: node
+  linkType: hard
+
 "@kurone-kito/eslint-config-base@npm:^0.8.4":
   version: 0.8.4
   resolution: "@kurone-kito/eslint-config-base@npm:0.8.4"
@@ -924,6 +936,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:^18.4.3"
     "@cspell/cspell-types": "npm:^8.1.2"
     "@cspell/eslint-plugin": "npm:^8.1.2"
+    "@kurone-kito/cspell-config": "npm:^0.8.4"
     "@kurone-kito/eslint-config-base": "npm:^0.8.4"
     "@kurone-kito/prettier-config": "npm:^0.8.4"
     "@kurone-kito/typescript-config": "npm:^0.8.4"
@@ -3298,6 +3311,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"function-bind@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "function-bind@npm:1.1.1"
+  checksum: d83f2968030678f0b8c3f2183d63dcd969344eb8b55b4eb826a94ccac6de8b87c95bebffda37a6386c74f152284eb02956ff2c496897f35d32bdc2628ac68ac5
+  languageName: node
+  linkType: hard
+
 "function-bind@npm:^1.1.2":
   version: 1.1.2
   resolution: "function-bind@npm:1.1.2"
@@ -3634,6 +3654,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"has@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "has@npm:1.0.3"
+  dependencies:
+    function-bind: "npm:^1.1.1"
+  checksum: a449f3185b1d165026e8d25f6a8c3390bd25c201ff4b8c1aaf948fc6a5fcfd6507310b8c00c13a3325795ea9791fcc3d79d61eafa313b5750438fc19183df57b
+  languageName: node
+  linkType: hard
+
 "hasown@npm:^2.0.0":
   version: 2.0.0
   resolution: "hasown@npm:2.0.0"
@@ -3869,7 +3898,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-core-module@npm:^2.11.0, is-core-module@npm:^2.13.0, is-core-module@npm:^2.13.1, is-core-module@npm:^2.5.0":
+"is-core-module@npm:^2.11.0, is-core-module@npm:^2.13.0, is-core-module@npm:^2.5.0":
+  version: 2.13.0
+  resolution: "is-core-module@npm:2.13.0"
+  dependencies:
+    has: "npm:^1.0.3"
+  checksum: 55ccb5ccd208a1e088027065ee6438a99367e4c31c366b52fbaeac8fa23111cd17852111836d904da604801b3286d38d3d1ffa6cd7400231af8587f021099dc6
+  languageName: node
+  linkType: hard
+
+"is-core-module@npm:^2.13.1":
   version: 2.13.1
   resolution: "is-core-module@npm:2.13.1"
   dependencies:
@@ -6163,10 +6201,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vscode-languageserver-textdocument@npm:^1.0.11, vscode-languageserver-textdocument@npm:^1.0.3":
+"vscode-languageserver-textdocument@npm:^1.0.11":
   version: 1.0.11
   resolution: "vscode-languageserver-textdocument@npm:1.0.11"
   checksum: 6096d2a85570e819e01ff406de7c88c48211e6874c6fc71df92193aa8b5aadf40591e44f033d634a95d04975d7aad29049d3eccab617ca41c189ae325aadb913
+  languageName: node
+  linkType: hard
+
+"vscode-languageserver-textdocument@npm:^1.0.3":
+  version: 1.0.10
+  resolution: "vscode-languageserver-textdocument@npm:1.0.10"
+  checksum: 4edf7d190fccf1f0b8c2e3fe0e7a783844df22cf5ed66ff1a30854131a012b748b59c3e478a65e9471fbd8b7da18c668e5f0251aed6c9543399cbc5e71afd84b
   languageName: node
   linkType: hard
 
