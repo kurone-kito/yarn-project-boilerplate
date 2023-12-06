@@ -829,6 +829,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@kurone-kito/commitlint-config@npm:^0.8.4":
+  version: 0.8.4
+  resolution: "@kurone-kito/commitlint-config@npm:0.8.4"
+  peerDependenciesMeta:
+    "@commitlint/config-conventional":
+      optional: true
+  checksum: 5ddceeacd6b85343f3bdbde190d2d87348fd000ceea10cd7792854ec90fba9194c3fa4cdc1b3a299e429e5431a8a4ab0f6e42162da948d4b63944120819def1b
+  languageName: node
+  linkType: hard
+
 "@kurone-kito/cspell-config@npm:^0.8.4":
   version: 0.8.4
   resolution: "@kurone-kito/cspell-config@npm:0.8.4"
@@ -936,6 +946,7 @@ __metadata:
     "@commitlint/config-conventional": "npm:^18.4.3"
     "@cspell/cspell-types": "npm:^8.1.2"
     "@cspell/eslint-plugin": "npm:^8.1.2"
+    "@kurone-kito/commitlint-config": "npm:^0.8.4"
     "@kurone-kito/cspell-config": "npm:^0.8.4"
     "@kurone-kito/eslint-config-base": "npm:^0.8.4"
     "@kurone-kito/prettier-config": "npm:^0.8.4"

@@ -34,6 +34,7 @@
     "@commitlint/config-conventional": "^18.4.3",
     "@cspell/cspell-types": "^8.1.2",
     "@cspell/eslint-plugin": "^8.1.2",
+    "@kurone-kito/commitlint-config": "^0.8.4",
     "@kurone-kito/cspell-config": "^0.8.4",
     "@kurone-kito/eslint-config-base": "^0.8.4",
     "@kurone-kito/prettier-config": "^0.8.4",
