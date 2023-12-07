@@ -911,6 +911,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@kurone-kito/lint-staged-config@npm:^0.8.4":
+  version: 0.8.4
+  resolution: "@kurone-kito/lint-staged-config@npm:0.8.4"
+  peerDependencies:
+    cspell: ">=5.7.x"
+    eslint: ">=8.x.x"
+    eslint-formatter-codeframe: "*"
+    lint-staged: ">=12.1.0"
+    prettier: ">=3.0.x"
+  checksum: 4f2719bf1790d9445c86979297aaed4c3a1075876faacd6b93e1819c4862f4982e0c201c20ed3aa54dc2b5466a6dc4cea6693d8ac4c2eef1cd3335c5843d6236
+  languageName: node
+  linkType: hard
+
 "@kurone-kito/prettier-config@npm:^0.8.4":
   version: 0.8.4
   resolution: "@kurone-kito/prettier-config@npm:0.8.4"
@@ -949,6 +962,7 @@ __metadata:
     "@kurone-kito/commitlint-config": "npm:^0.8.4"
     "@kurone-kito/cspell-config": "npm:^0.8.4"
     "@kurone-kito/eslint-config-base": "npm:^0.8.4"
+    "@kurone-kito/lint-staged-config": "npm:^0.8.4"
     "@kurone-kito/prettier-config": "npm:^0.8.4"
     "@kurone-kito/typescript-config": "npm:^0.8.4"
     "@typescript-eslint/eslint-plugin": "npm:^6.13.2"
