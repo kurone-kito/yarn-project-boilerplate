@@ -3,32 +3,9 @@ cache:
   cacheLocation: node_modules/.cache/cspell/.cspell.cache
   cacheStrategy: metadata
   useCache: true
-dictionaries:
-  - cpp
-  - node
-  - npm
-  - typescript
-enableGlobDot: true
-language: en,eo,ja
-languageSettings:
-  - allowCompoundWords: true
-    caseSensitive: false
-    enabled: true
-    languageId: '*'
-    locale: en,eo,ja
+import:
+  - '@kurone-kito/cspell-config'
 ignorePaths:
-  - .*ignore
-  - .git
-  - .github/CODE_OF_CONDUCT.*
-  - .vscode/extensions.json
-  - .yarn
-  - cspell.config.yml
   - node_modules
-  - yarn.lock
-ignoreWords:
-  - aicommits
-  - kito
-  - kurone
-  - Kuroné
-useGitignore: true
+usePnP: true
 version: '0.2'

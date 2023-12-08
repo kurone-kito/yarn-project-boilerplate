@@ -309,10 +309,6 @@ $RECYCLE.BIN/
 ### THE PROJECT SPECIFIES #################################################
 
 ### Node ###
-# ESLint
-.eslintrc.js
-.eslintrc.cjs
-
 # JSON
 *.json
 

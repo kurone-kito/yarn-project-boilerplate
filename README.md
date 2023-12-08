@@ -2,23 +2,25 @@
 
 ## Features
 
-- Yarn with PnP
+- Yarn (berry) with PnP
 - TypeScript
 - ESLint
 - Prettier
+- Commitlint with Husky
 - Visual Studio Code / Vim ready
-- CI / CD configurations
+- CI configurations
   - Dependabot
   - GitHub Actions
+  - ReviewPad
 
 ## System Requirements
 
-- Node.js Gallium LTS (`^16.20.2`)
-- Yarn (`>=2.4.3`)
+- Node.js Hydrogen LTS (`^18.19.0`)
 
 ## Install the dependencies
 
 ```sh
+corepack enable
 yarn install
 ```
 
@@ -47,6 +49,7 @@ yarn run clean
 
 ### 1. Remove the following files
 
+- `.gitattributes`
 - `.yarn/`
 - `.yarnrc.yml`
 - `yarn.lock`
@@ -56,17 +59,18 @@ yarn run clean
 ```diff
 --- a/.github/workflows/push.yml
 +++ b/.github/workflows/push.yml
-@@ -20,16 +20,18 @@ jobs:
-       - name: Prepare the Node.js version ${{ matrix.node-version }} environment
-         uses: actions/setup-node@v2
+@@ -21,19 +21,17 @@ jobs:
+         uses: actions/setup-node@v4
+         with:
+           node-version: ${{ matrix.node-version }}
+-      - name: Enable the corepack because of the Yarn berry
+-        run: corepack enable
+       - name: Post-prepare the Node.js version ${{ matrix.node-version }} environment
+         uses: actions/setup-node@v4
          with:
 -          cache: ${{ !env.ACT && 'yarn' || '' }}
 +          cache: ${{ !env.ACT && 'npm' || '' }}
            node-version: ${{ matrix.node-version }}
-       - name: Enable the corepack because of the Yarn 3
-         run: corepack enable
-+      - name: set npm config
-+        run: npm config set unsafe-perm true
        - env:
            HUSKY: 0
          name: Install the dependencies
@@ -144,10 +148,9 @@ yarn run clean
 ```diff
 --- a/package.json
 +++ b/package.json
-@@ -16,16 +16,16 @@
-   "files": [],
-   "scripts": {
-     "clean": "rimraf -g \".eslintcache\" \"*.tgz\" \"*.tsbuildinfo\"",
+@@ -18,15 +18,15 @@
+     "clean": "rimraf -g .eslintcache \"*.tgz\" \"*.tsbuildinfo\" \"node_modules/.cache/**/*\"",
+     "commit": "aicommits -t conventional",
 -    "postinstall": "husky install",
 -    "lint": "conc -m 1 \"yarn:lint:*:check\"",
 +    "lint": "conc -m 1 \"npm:lint:*:check\"",
@@ -157,33 +160,33 @@ yarn run clean
 -    "lint:fix": "conc -m 1 \"yarn:lint:*:fix\"",
 -    "lint:prettier:check": "yarn run prettier -cu",
 -    "lint:prettier:fix": "yarn run prettier -uw",
--    "prettier": "prettier --cache --loglevel=warn \"$@\" \"./**/*\"",
+-    "prettier": "prettier --cache --log-level=warn \"$@\" \"./**/*\"",
 -    "test": "yarn run lint"
 +    "lint:eslint:fix": "npm run lint:eslint:check -- --fix",
 +    "lint:fix": "conc -m 1 \"npm:lint:*:fix\"",
 +    "lint:prettier:check": "npm run prettier -- -cu",
 +    "lint:prettier:fix": "npm run prettier -- -uw",
 +    "prepare": "husky install",
-+    "prettier": "prettier --cache --loglevel=warn \"./**/*\"",
++    "prettier": "prettier --cache --log-level=warn \"./**/*\"",
 +    "test": "npm run lint"
    },
    "prettier": "@kurone-kito/prettier-config",
    "devDependencies": {
-@@ -39,7 +39,6 @@
-     "@kurone-kito/typescript-config": "^0.7.3",
-     "@typescript-eslint/eslint-plugin": "^6.4.0",
-     "@typescript-eslint/parser": "^6.4.0",
--    "@yarnpkg/sdks": "^3.0.0-rc.48",
-     "concurrently": "^8.2.0",
-     "cspell": "^6.31.2",
-     "eslint": "^8.45.0",
-@@ -64,7 +63,6 @@
-     "typescript": "~5.1.6",
+@@ -42,7 +42,6 @@
+     "@kurone-kito/typescript-config": "^0.8.4",
+     "@typescript-eslint/eslint-plugin": "^6.13.2",
+     "@typescript-eslint/parser": "^6.13.2",
+-    "@yarnpkg/sdks": "^3.1.0",
+     "aicommits": "^1.11.0",
+     "concurrently": "^8.2.2",
+     "cspell": "^8.1.2",
+@@ -67,7 +66,6 @@
+     "typescript": "~5.3.2",
      "typescript-eslint-language-service": "^5.0.5"
    },
--  "packageManager": "yarn@3.6.1",
+-  "packageManager": "yarn@4.0.2",
    "engines": {
-     "node": ">=16.20"
+     "node": ">=18.19"
    },
 ```
 
