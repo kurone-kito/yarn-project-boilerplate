@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/linux,macos,node,sublimetext,vim,visualstudiocode,windows,yarn
-# Edit at https://www.toptal.com/developers/gitignore?templates=linux,macos,node,sublimetext,vim,visualstudiocode,windows,yarn
+# Created by https://www.toptal.com/developers/gitignore/api/linux,macos,node,patch,sublimetext,vim,visualstudiocode,windows,yarn
+# Edit at https://www.toptal.com/developers/gitignore?templates=linux,macos,node,patch,sublimetext,vim,visualstudiocode,windows,yarn
 
 ### Linux ###
 *~
@@ -189,6 +189,10 @@ public
 # SvelteKit build / generate output
 .svelte-kit
 
+### Patch ###
+*.orig
+*.rej
+
 ### SublimeText ###
 # Cache files for Sublime Text
 *.tmlanguage.cache
@@ -304,4 +308,4 @@ $RECYCLE.BIN/
 # and uncomment the following lines
 .pnp.*
 
-# End of https://www.toptal.com/developers/gitignore/api/linux,macos,node,sublimetext,vim,visualstudiocode,windows,yarn
+# End of https://www.toptal.com/developers/gitignore/api/linux,macos,node,patch,sublimetext,vim,visualstudiocode,windows,yarn
