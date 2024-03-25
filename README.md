@@ -184,7 +184,7 @@ yarn run clean
      "typescript": "~5.3.2",
      "typescript-eslint-language-service": "^5.0.5"
    },
--  "packageManager": "yarn@4.0.2",
+-  "packageManager": "yarn@4.1.1",
    "engines": {
      "node": ">=18.19"
    },
