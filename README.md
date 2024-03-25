@@ -173,15 +173,15 @@ yarn run clean
    "prettier": "@kurone-kito/prettier-config",
    "devDependencies": {
 @@ -42,7 +42,6 @@
-     "@kurone-kito/typescript-config": "^0.8.4",
-     "@typescript-eslint/eslint-plugin": "^6.13.2",
-     "@typescript-eslint/parser": "^6.13.2",
+     "@kurone-kito/typescript-config": "^0.9.0",
+     "@typescript-eslint/eslint-plugin": "^7.3.1",
+     "@typescript-eslint/parser": "^7.3.1",
 -    "@yarnpkg/sdks": "^3.1.0",
      "aicommits": "^1.11.0",
      "concurrently": "^8.2.2",
-     "cspell": "^8.1.2",
-@@ -67,7 +66,6 @@
-     "typescript": "~5.3.2",
+     "cspell": "^8.6.1",
+@@ -68,7 +67,6 @@
+     "typescript": "~5.4.3",
      "typescript-eslint-language-service": "^5.0.5"
    },
 -  "packageManager": "yarn@4.1.1",
