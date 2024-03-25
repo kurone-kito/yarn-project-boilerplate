@@ -141,8 +141,8 @@ yarn run clean
    "typescript.enablePromptUseWorkspaceTsdk": true,
 -  "typescript.tsdk": ".yarn/sdks/typescript/lib",
    "yaml.schemas": {
-     "https://raw.githubusercontent.com/reviewpad/schemas/main/latest/schema.json": [
-       "reviewpad.yml"
+      "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/packages/cspell-types/cspell.schema.json": [
+        "cspell.config.yml"
 ```
 
 ```diff
