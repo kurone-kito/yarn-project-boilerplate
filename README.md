@@ -148,9 +148,9 @@ yarn run clean
 ```diff
 --- a/package.json
 +++ b/package.json
-@@ -18,15 +18,15 @@
+@@ -17,15 +17,15 @@
+   "scripts": {
      "clean": "rimraf -g .eslintcache \"*.tgz\" \"*.tsbuildinfo\" \"node_modules/.cache/**/*\"",
-     "commit": "aicommits -t conventional",
 -    "postinstall": "husky install",
 -    "lint": "conc -m 1 \"yarn:lint:*:check\"",
 +    "lint": "conc -m 1 \"npm:lint:*:check\"",
@@ -172,15 +172,15 @@ yarn run clean
    },
    "prettier": "@kurone-kito/prettier-config",
    "devDependencies": {
-@@ -42,7 +42,6 @@
+@@ -41,7 +41,6 @@
      "@kurone-kito/typescript-config": "^0.9.0",
      "@typescript-eslint/eslint-plugin": "^7.3.1",
      "@typescript-eslint/parser": "^7.3.1",
 -    "@yarnpkg/sdks": "^3.1.0",
-     "aicommits": "^1.11.0",
      "concurrently": "^8.2.2",
      "cspell": "^8.6.1",
-@@ -68,7 +67,6 @@
+     "eslint": "^8.57.0",
+@@ -66,7 +65,6 @@
      "typescript": "~5.4.3",
      "typescript-eslint-language-service": "^5.0.5"
    },
