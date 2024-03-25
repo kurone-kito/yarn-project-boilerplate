@@ -151,7 +151,7 @@ yarn run clean
 @@ -17,15 +17,15 @@
    "scripts": {
      "clean": "rimraf -g .eslintcache \"*.tgz\" \"*.tsbuildinfo\" \"node_modules/.cache/**/*\"",
--    "postinstall": "husky install",
+-    "postinstall": "husky",
 -    "lint": "conc -m 1 \"yarn:lint:*:check\"",
 +    "lint": "conc -m 1 \"npm:lint:*:check\"",
      "lint:cspell:check": "cspell lint --no-progress --show-suggestions -u \"./**/*\"",
@@ -166,7 +166,7 @@ yarn run clean
 +    "lint:fix": "conc -m 1 \"npm:lint:*:fix\"",
 +    "lint:prettier:check": "npm run prettier -- -cu",
 +    "lint:prettier:fix": "npm run prettier -- -uw",
-+    "prepare": "husky install",
++    "prepare": "husky",
 +    "prettier": "prettier --cache --log-level=warn \"./**/*\"",
 +    "test": "npm run lint"
    },
