@@ -11,7 +11,6 @@
 - CI configurations
   - Dependabot
   - GitHub Actions
-  - ReviewPad
 
 ## System Requirements
 

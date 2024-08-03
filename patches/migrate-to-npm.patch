@@ -154,7 +154,7 @@ index 535b67a..4160092 100644
      "editorconfig.editorconfig",
      "esbenp.prettier-vscode",
 diff --git a/.vscode/settings.json b/.vscode/settings.json
-index 21e4d73..c180165 100644
+index 722c5b3..4c36131 100644
 --- a/.vscode/settings.json
 +++ b/.vscode/settings.json
 @@ -1,26 +1,16 @@
@@ -182,10 +182,10 @@ index 21e4d73..c180165 100644
    "typescript.enablePromptUseWorkspaceTsdk": true,
 -  "typescript.tsdk": ".yarn/sdks/typescript/lib",
    "yaml.schemas": {
-     "https://raw.githubusercontent.com/reviewpad/schemas/main/latest/schema.json": [
-       "reviewpad.yml"
+     "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/packages/cspell-types/cspell.schema.json": [
+       "cspell.config.yml"
 diff --git a/README.md b/README.md
-index 864abe7..b6e3492 100644
+index 986bf67..0c501e8 100644
 --- a/README.md
 +++ b/README.md
 @@ -1,8 +1,7 @@
@@ -198,7 +198,7 @@ index 864abe7..b6e3492 100644
  - TypeScript
  - ESLint
  - Prettier
-@@ -21,28 +20,28 @@
+@@ -20,28 +19,28 @@
  
  ```sh
  corepack enable
