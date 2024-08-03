@@ -54,7 +54,7 @@ git clean -fdx
 patch -p1 < patches/migrate-to-npm.patch
 
 # 3. Remove some files
-npm x -y -- rimraf .gitattributes .yarn .yarnrc.yml yarn.lock
+npm x -y -- rimraf .yarn .yarnrc.yml yarn.lock
 
 # 4. Install the dependencies
 npm install

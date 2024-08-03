@@ -36,6 +36,16 @@ index 368f1c2..bb2f692 100644
  
  ### THE PROJECT SPECIFIES #################################################
  
+diff --git a/.gitattributes b/.gitattributes
+index 3f4cf3d..a124397 100644
+--- a/.gitattributes
++++ b/.gitattributes
+@@ -2,5 +2,3 @@
+ .gitattributes export-ignore
+ .gitignore export-ignore
+ .husky/** export-ignore
+-
+-.yarn/** linguist-vendored
 diff --git a/.github/workflows/push.yml b/.github/workflows/push.yml
 index 11757c1..72bf023 100644
 --- a/.github/workflows/push.yml
@@ -185,7 +195,7 @@ index 722c5b3..4c36131 100644
      "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/packages/cspell-types/cspell.schema.json": [
        "cspell.config.yml"
 diff --git a/README.md b/README.md
-index 986bf67..0c501e8 100644
+index e6b2cfd..e6abf1a 100644
 --- a/README.md
 +++ b/README.md
 @@ -1,8 +1,7 @@

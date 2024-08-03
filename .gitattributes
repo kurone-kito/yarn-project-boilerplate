@@ -1,1 +1,6 @@
-/.yarn/** linguist-vendored
+.github/** export-ignore
+.gitattributes export-ignore
+.gitignore export-ignore
+.husky/** export-ignore
+
+.yarn/** linguist-vendored
