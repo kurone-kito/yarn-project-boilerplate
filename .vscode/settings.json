@@ -1,5 +1,17 @@
 {
   "eslint.nodePath": ".yarn/sdks",
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "*.md": "${capture}.*.md",
+    ".eslintrc.*": ".eslint*",
+    ".gitattributes": ".gitignore",
+    ".tool-versions": ".node-version, .nvmrc",
+    "package.json": ".yarnrc.yml, yarn.lock, .pnp.*"
+  },
+  "files.associations": {
+    "LICENSE": "plaintext"
+  },
   "files.readonlyInclude": {
     "**/.pnp.*": true,
     "**/.yarn/**/*": true,

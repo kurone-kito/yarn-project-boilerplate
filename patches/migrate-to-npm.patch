@@ -164,12 +164,25 @@ index 535b67a..4160092 100644
      "editorconfig.editorconfig",
      "esbenp.prettier-vscode",
 diff --git a/.vscode/settings.json b/.vscode/settings.json
-index be8a973..d0525f4 100644
+index 34aa634..d785801 100644
 --- a/.vscode/settings.json
 +++ b/.vscode/settings.json
-@@ -1,26 +1,16 @@
+@@ -1,5 +1,4 @@
  {
 -  "eslint.nodePath": ".yarn/sdks",
+   "explorer.fileNesting.enabled": true,
+   "explorer.fileNesting.expand": false,
+   "explorer.fileNesting.patterns": {
+@@ -7,32 +6,23 @@
+     ".eslintrc.*": ".eslint*",
+     ".gitattributes": ".gitignore",
+     ".tool-versions": ".node-version, .nvmrc",
+-    "package.json": ".yarnrc.yml, yarn.lock, .pnp.*"
++    "package.json": ".npmrc, package-lock.json"
+   },
+   "files.associations": {
+     "LICENSE": "plaintext"
+   },
    "files.readonlyInclude": {
 -    "**/.pnp.*": true,
 -    "**/.yarn/**/*": true,
