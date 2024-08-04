@@ -37,10 +37,10 @@ index 368f1c2..bb2f692 100644
  ### THE PROJECT SPECIFIES #################################################
  
 diff --git a/.gitattributes b/.gitattributes
-index 3f4cf3d..a124397 100644
+index fee04f6..a4e3f4f 100644
 --- a/.gitattributes
 +++ b/.gitattributes
-@@ -2,5 +2,3 @@
+@@ -3,5 +3,3 @@
  .gitattributes export-ignore
  .gitignore export-ignore
  .husky/** export-ignore
@@ -164,7 +164,7 @@ index 535b67a..4160092 100644
      "editorconfig.editorconfig",
      "esbenp.prettier-vscode",
 diff --git a/.vscode/settings.json b/.vscode/settings.json
-index 722c5b3..4c36131 100644
+index be8a973..d0525f4 100644
 --- a/.vscode/settings.json
 +++ b/.vscode/settings.json
 @@ -1,26 +1,16 @@
@@ -192,10 +192,10 @@ index 722c5b3..4c36131 100644
    "typescript.enablePromptUseWorkspaceTsdk": true,
 -  "typescript.tsdk": ".yarn/sdks/typescript/lib",
    "yaml.schemas": {
-     "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/packages/cspell-types/cspell.schema.json": [
-       "cspell.config.yml"
+     "https://coderabbit.ai/integrations/coderabbit-overrides.v2.json": [
+       ".coderabbit.yaml"
 diff --git a/README.md b/README.md
-index e6b2cfd..e6abf1a 100644
+index 668d999..bc40247 100644
 --- a/README.md
 +++ b/README.md
 @@ -1,8 +1,7 @@
@@ -208,7 +208,7 @@ index e6b2cfd..e6abf1a 100644
  - TypeScript
  - ESLint
  - Prettier
-@@ -20,28 +19,28 @@
+@@ -21,28 +20,28 @@
  
  ```sh
  corepack enable
