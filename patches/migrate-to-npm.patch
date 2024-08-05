@@ -47,7 +47,7 @@ index 80a5adc..3e3cdc7 100644
 -
 -.yarn/** linguist-vendored
 diff --git a/.github/workflows/push.yml b/.github/workflows/push.yml
-index 11757c1..72bf023 100644
+index 6a69989..d10fb98 100644
 --- a/.github/workflows/push.yml
 +++ b/.github/workflows/push.yml
 @@ -21,19 +21,19 @@ jobs:
