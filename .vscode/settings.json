@@ -10,6 +10,7 @@
     "package.json": ".yarnrc.yml, yarn.lock, .pnp.*"
   },
   "files.associations": {
+    ".imgbotconfig": "json",
     "LICENSE": "plaintext"
   },
   "files.readonlyInclude": {

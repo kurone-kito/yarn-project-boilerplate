@@ -37,13 +37,13 @@ index 368f1c2..bb2f692 100644
  ### THE PROJECT SPECIFIES #################################################
  
 diff --git a/.gitattributes b/.gitattributes
-index fee04f6..a4e3f4f 100644
+index 80a5adc..3e3cdc7 100644
 --- a/.gitattributes
 +++ b/.gitattributes
-@@ -3,5 +3,3 @@
- .gitattributes export-ignore
+@@ -4,5 +4,3 @@
  .gitignore export-ignore
  .husky/** export-ignore
+ .imgbotconfig export-ignore
 -
 -.yarn/** linguist-vendored
 diff --git a/.github/workflows/push.yml b/.github/workflows/push.yml
@@ -164,7 +164,7 @@ index 535b67a..4160092 100644
      "editorconfig.editorconfig",
      "esbenp.prettier-vscode",
 diff --git a/.vscode/settings.json b/.vscode/settings.json
-index 34aa634..d785801 100644
+index c6d2515..d409440 100644
 --- a/.vscode/settings.json
 +++ b/.vscode/settings.json
 @@ -1,5 +1,4 @@
@@ -173,7 +173,7 @@ index 34aa634..d785801 100644
    "explorer.fileNesting.enabled": true,
    "explorer.fileNesting.expand": false,
    "explorer.fileNesting.patterns": {
-@@ -7,32 +6,23 @@
+@@ -7,33 +6,24 @@
      ".eslintrc.*": ".eslint*",
      ".gitattributes": ".gitignore",
      ".tool-versions": ".node-version, .nvmrc",
@@ -181,6 +181,7 @@ index 34aa634..d785801 100644
 +    "package.json": ".npmrc, package-lock.json"
    },
    "files.associations": {
+     ".imgbotconfig": "json",
      "LICENSE": "plaintext"
    },
    "files.readonlyInclude": {
