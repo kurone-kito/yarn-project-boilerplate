@@ -258,7 +258,7 @@ index 668d999..bc40247 100644
  
  ## Migrate to NPM
 diff --git a/package.json b/package.json
-index e77c95e..75f779d 100644
+index 4230617..9a09745 100644
 --- a/package.json
 +++ b/package.json
 @@ -2,7 +2,7 @@
@@ -270,9 +270,9 @@ index e77c95e..75f779d 100644
    "keywords": [
      "boilerplate",
      "template"
-@@ -18,15 +18,15 @@
+@@ -17,15 +17,15 @@
+   "scripts": {
      "clean": "rimraf -g .eslintcache \"*.tgz\" \"*.tsbuildinfo\" \"node_modules/.cache/**/*\"",
-     "commit": "aicommits -t conventional",
      "postinstall": "husky install",
 -    "lint": "conc -m 1 \"yarn:lint:*:check\"",
 +    "lint": "conc -m 1 \"npm:lint:*:check\"",
@@ -292,15 +292,15 @@ index e77c95e..75f779d 100644
    },
    "prettier": "@kurone-kito/prettier-config",
    "devDependencies": {
-@@ -42,7 +42,6 @@
+@@ -41,7 +41,6 @@
      "@kurone-kito/typescript-config": "^0.8.4",
      "@typescript-eslint/eslint-plugin": "^6.13.2",
      "@typescript-eslint/parser": "^6.13.2",
 -    "@yarnpkg/sdks": "^3.1.0",
-     "aicommits": "^1.11.0",
      "concurrently": "^8.2.2",
      "cspell": "^8.1.2",
-@@ -67,7 +66,6 @@
+     "eslint": "^8.55.0",
+@@ -65,7 +64,6 @@
      "typescript": "~5.3.2",
      "typescript-eslint-language-service": "^5.0.5"
    },
