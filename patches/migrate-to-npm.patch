@@ -209,7 +209,7 @@ index c6d2515..d409440 100644
      "https://coderabbit.ai/integrations/coderabbit-overrides.v2.json": [
        ".coderabbit.yaml"
 diff --git a/README.md b/README.md
-index 668d999..bc40247 100644
+index e2e28b5..3503387 100644
 --- a/README.md
 +++ b/README.md
 @@ -1,8 +1,7 @@
@@ -258,7 +258,7 @@ index 668d999..bc40247 100644
  
  ## Migrate to NPM
 diff --git a/package.json b/package.json
-index 4230617..9a09745 100644
+index 6fa340c..efc0306 100644
 --- a/package.json
 +++ b/package.json
 @@ -2,7 +2,7 @@
@@ -306,5 +306,5 @@ index 4230617..9a09745 100644
    },
 -  "packageManager": "yarn@4.0.2",
    "engines": {
-     "node": ">=18.19"
+     "node": ">=18"
    },

@@ -15,7 +15,7 @@
 
 ## System Requirements
 
-- Node.js Hydrogen LTS (`^18.19.0`)
+- Node.js Hydrogen LTS (`^18.20.4`)
 
 ## Install the dependencies
 
