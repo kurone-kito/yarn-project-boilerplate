@@ -110,22 +110,22 @@ index 776979a..eacfb31 100644
 -# End of https://www.toptal.com/developers/gitignore/api/linux,macos,node,patch,sublimetext,vim,visualstudiocode,windows,yarn
 +# End of https://www.toptal.com/developers/gitignore/api/linux,macos,node,patch,sublimetext,vim,visualstudiocode,windows
 diff --git a/.husky/commit-msg b/.husky/commit-msg
-index 81be740..6100f76 100755
+index a6cc5a5..319c40f 100755
 --- a/.husky/commit-msg
 +++ b/.husky/commit-msg
-@@ -4,4 +4,4 @@
- 
- . "$(dirname "$0")/_/husky.sh"
+@@ -2,4 +2,4 @@
+ # -*- mode: sh -*-
+ # vim: set ft=sh :
  
 -yarn exec commitlint --edit "${1}"
 +npm x --no -- commitlint --edit "${1}"
 diff --git a/.husky/pre-commit b/.husky/pre-commit
-index a36bbf2..6144733 100755
+index e244340..869ac2a 100755
 --- a/.husky/pre-commit
 +++ b/.husky/pre-commit
-@@ -4,4 +4,4 @@
- 
- . "$(dirname "$0")/_/husky.sh"
+@@ -2,4 +2,4 @@
+ # -*- mode: sh -*-
+ # vim: set ft=sh :
  
 -yarn exec lint-staged
 +npm x --no -- lint-staged
@@ -258,7 +258,7 @@ index e2e28b5..3503387 100644
  
  ## Migrate to NPM
 diff --git a/package.json b/package.json
-index 2d4ba31..97c1255 100644
+index 18d9a4d..cf2ad9c 100644
 --- a/package.json
 +++ b/package.json
 @@ -2,7 +2,7 @@
@@ -273,7 +273,7 @@ index 2d4ba31..97c1255 100644
 @@ -17,15 +17,15 @@
    "scripts": {
      "clean": "rimraf -g .eslintcache \"*.tgz\" \"*.tsbuildinfo\" \"node_modules/.cache/**/*\"",
-     "postinstall": "husky install",
+     "postinstall": "husky",
 -    "lint": "conc -m 1 \"yarn:lint:*:check\"",
 +    "lint": "conc -m 1 \"npm:lint:*:check\"",
      "lint:cspell:check": "cspell lint --no-progress --show-suggestions -u \"./**/*\"",
