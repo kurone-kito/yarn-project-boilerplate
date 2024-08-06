@@ -258,7 +258,7 @@ index e2e28b5..3503387 100644
  
  ## Migrate to NPM
 diff --git a/package.json b/package.json
-index 8e1e5e1..4780249 100644
+index f2f534a..def4982 100644
 --- a/package.json
 +++ b/package.json
 @@ -2,7 +2,7 @@
@@ -270,7 +270,7 @@ index 8e1e5e1..4780249 100644
    "keywords": [
      "boilerplate",
      "template"
-@@ -17,17 +17,17 @@
+@@ -17,19 +17,19 @@
    "scripts": {
      "clean": "rimraf -g .eslintcache \"*.tgz\" \"*.tsbuildinfo\" \"node_modules/.cache/**/*\"",
      "postinstall": "husky",
@@ -284,6 +284,8 @@ index 8e1e5e1..4780249 100644
 +    "lint:fix": "conc -m 1 \"npm:lint:cspell:check\" \"npm:lint:*:fix\"",
      "lint:markdown:check": "markdownlint-cli2 \"**/*.md\"",
      "lint:markdown:fix": "markdownlint-cli2 --fix \"**/*.md\"",
+     "lint:oxlint:check": "oxlint",
+     "lint:oxlint:fix": "oxlint --fix",
 -    "lint:prettier:check": "yarn run prettier -cu",
 -    "lint:prettier:fix": "yarn run prettier -uw",
 +    "lint:prettier:check": "npm run prettier -- -cu",
@@ -294,7 +296,7 @@ index 8e1e5e1..4780249 100644
    },
    "prettier": "@kurone-kito/prettier-config",
    "devDependencies": {
-@@ -43,7 +43,6 @@
+@@ -45,7 +45,6 @@
      "@kurone-kito/typescript-config": "^0.8.4",
      "@typescript-eslint/eslint-plugin": "^6.13.2",
      "@typescript-eslint/parser": "^6.13.2",
@@ -302,7 +304,7 @@ index 8e1e5e1..4780249 100644
      "concurrently": "^8.2.2",
      "cspell": "^8.13.2",
      "eslint": "^8.55.0",
-@@ -68,7 +67,6 @@
+@@ -72,7 +71,6 @@
      "typescript": "~5.3.2",
      "typescript-eslint-language-service": "^5.0.5"
    },
