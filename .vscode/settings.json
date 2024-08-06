@@ -6,6 +6,7 @@
     "*.md": "${capture}.*.md",
     ".eslintrc.*": ".eslint*",
     ".gitattributes": ".gitignore",
+    ".markdownlint.*": ".markdownlint-cli2.*",
     ".tool-versions": ".node-version, .nvmrc",
     "package.json": ".yarnrc.yml, yarn.lock, .pnp.*"
   },

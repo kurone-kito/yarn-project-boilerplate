@@ -153,18 +153,18 @@ index 0e775e9..78facd1 100644
    "workspace.workspaceFolderCheckCwd": false
  }
 diff --git a/.vscode/extensions.json b/.vscode/extensions.json
-index 535b67a..4160092 100644
+index 88b4015..ecd73ea 100644
 --- a/.vscode/extensions.json
 +++ b/.vscode/extensions.json
 @@ -1,6 +1,5 @@
  {
    "recommendations": [
 -    "arcanis.vscode-zipfs",
+     "davidanson.vscode-markdownlint",
      "dbaeumer.vscode-eslint",
      "editorconfig.editorconfig",
-     "esbenp.prettier-vscode",
 diff --git a/.vscode/settings.json b/.vscode/settings.json
-index c6d2515..d409440 100644
+index 4fae63d..3346832 100644
 --- a/.vscode/settings.json
 +++ b/.vscode/settings.json
 @@ -1,5 +1,4 @@
@@ -173,9 +173,9 @@ index c6d2515..d409440 100644
    "explorer.fileNesting.enabled": true,
    "explorer.fileNesting.expand": false,
    "explorer.fileNesting.patterns": {
-@@ -7,33 +6,24 @@
-     ".eslintrc.*": ".eslint*",
+@@ -8,33 +7,24 @@
      ".gitattributes": ".gitignore",
+     ".markdownlint.*": ".markdownlint-cli2.*",
      ".tool-versions": ".node-version, .nvmrc",
 -    "package.json": ".yarnrc.yml, yarn.lock, .pnp.*"
 +    "package.json": ".npmrc, package-lock.json"
@@ -258,7 +258,7 @@ index e2e28b5..3503387 100644
  
  ## Migrate to NPM
 diff --git a/package.json b/package.json
-index 18d9a4d..cf2ad9c 100644
+index 8e1e5e1..4780249 100644
 --- a/package.json
 +++ b/package.json
 @@ -2,7 +2,7 @@
@@ -270,7 +270,7 @@ index 18d9a4d..cf2ad9c 100644
    "keywords": [
      "boilerplate",
      "template"
-@@ -17,15 +17,15 @@
+@@ -17,17 +17,17 @@
    "scripts": {
      "clean": "rimraf -g .eslintcache \"*.tgz\" \"*.tsbuildinfo\" \"node_modules/.cache/**/*\"",
      "postinstall": "husky",
@@ -280,10 +280,12 @@ index 18d9a4d..cf2ad9c 100644
      "lint:eslint:check": "eslint --cache --cache-strategy=content -f codeframe \"./**/*\"",
 -    "lint:eslint:fix": "yarn run lint:eslint:check --fix",
 -    "lint:fix": "conc -m 1 \"yarn:lint:cspell:check\" \"yarn:lint:*:fix\"",
--    "lint:prettier:check": "yarn run prettier -cu",
--    "lint:prettier:fix": "yarn run prettier -uw",
 +    "lint:eslint:fix": "npm run lint:eslint:check -- --fix",
 +    "lint:fix": "conc -m 1 \"npm:lint:cspell:check\" \"npm:lint:*:fix\"",
+     "lint:markdown:check": "markdownlint-cli2 \"**/*.md\"",
+     "lint:markdown:fix": "markdownlint-cli2 --fix \"**/*.md\"",
+-    "lint:prettier:check": "yarn run prettier -cu",
+-    "lint:prettier:fix": "yarn run prettier -uw",
 +    "lint:prettier:check": "npm run prettier -- -cu",
 +    "lint:prettier:fix": "npm run prettier -- -uw",
      "prettier": "prettier --cache --log-level=warn \"$@\" \"./**/*\"",
@@ -292,7 +294,7 @@ index 18d9a4d..cf2ad9c 100644
    },
    "prettier": "@kurone-kito/prettier-config",
    "devDependencies": {
-@@ -41,7 +41,6 @@
+@@ -43,7 +43,6 @@
      "@kurone-kito/typescript-config": "^0.8.4",
      "@typescript-eslint/eslint-plugin": "^6.13.2",
      "@typescript-eslint/parser": "^6.13.2",
@@ -300,7 +302,7 @@ index 18d9a4d..cf2ad9c 100644
      "concurrently": "^8.2.2",
      "cspell": "^8.13.2",
      "eslint": "^8.55.0",
-@@ -65,7 +64,6 @@
+@@ -68,7 +67,6 @@
      "typescript": "~5.3.2",
      "typescript-eslint-language-service": "^5.0.5"
    },
