@@ -7,5 +7,8 @@ import:
   - '@kurone-kito/cspell-config'
 ignorePaths:
   - node_modules
+  - patches
 usePnP: true
 version: '0.2'
+words:
+  - aicommits

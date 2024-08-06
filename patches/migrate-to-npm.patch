@@ -258,7 +258,7 @@ index e2e28b5..3503387 100644
  
  ## Migrate to NPM
 diff --git a/package.json b/package.json
-index 62374a1..efc0306 100644
+index 2d4ba31..97c1255 100644
 --- a/package.json
 +++ b/package.json
 @@ -2,7 +2,7 @@
@@ -279,11 +279,11 @@ index 62374a1..efc0306 100644
      "lint:cspell:check": "cspell lint --no-progress --show-suggestions -u \"./**/*\"",
      "lint:eslint:check": "eslint --cache --cache-strategy=content -f codeframe \"./**/*\"",
 -    "lint:eslint:fix": "yarn run lint:eslint:check --fix",
--    "lint:fix": "conc -m 1 \"yarn:lint:*:fix\"",
+-    "lint:fix": "conc -m 1 \"yarn:lint:cspell:check\" \"yarn:lint:*:fix\"",
 -    "lint:prettier:check": "yarn run prettier -cu",
 -    "lint:prettier:fix": "yarn run prettier -uw",
 +    "lint:eslint:fix": "npm run lint:eslint:check -- --fix",
-+    "lint:fix": "conc -m 1 \"npm:lint:*:fix\"",
++    "lint:fix": "conc -m 1 \"npm:lint:cspell:check\" \"npm:lint:*:fix\"",
 +    "lint:prettier:check": "npm run prettier -- -cu",
 +    "lint:prettier:fix": "npm run prettier -- -uw",
      "prettier": "prettier --cache --log-level=warn \"$@\" \"./**/*\"",
@@ -298,7 +298,7 @@ index 62374a1..efc0306 100644
      "@typescript-eslint/parser": "^6.13.2",
 -    "@yarnpkg/sdks": "^3.1.0",
      "concurrently": "^8.2.2",
-     "cspell": "^8.1.2",
+     "cspell": "^8.13.2",
      "eslint": "^8.55.0",
 @@ -65,7 +64,6 @@
      "typescript": "~5.3.2",
