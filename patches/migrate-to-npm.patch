@@ -1,41 +1,3 @@
-diff --git a/.eslintignore b/.eslintignore
-index 368f1c2..bb2f692 100644
---- a/.eslintignore
-+++ b/.eslintignore
-@@ -1,5 +1,5 @@
--# Created by https://www.toptal.com/developers/gitignore/api/linux,macos,node,patch,sublimetext,vim,visualstudiocode,windows,yarn
--# Edit at https://www.toptal.com/developers/gitignore?templates=linux,macos,node,patch,sublimetext,vim,visualstudiocode,windows,yarn
-+# Created by https://www.toptal.com/developers/gitignore/api/linux,macos,node,patch,sublimetext,vim,visualstudiocode,windows
-+# Edit at https://www.toptal.com/developers/gitignore?templates=linux,macos,node,patch,sublimetext,vim,visualstudiocode,windows
- 
- ### Linux ###
- *~
-@@ -291,24 +291,7 @@ $RECYCLE.BIN/
- # Windows shortcuts
- *.lnk
- 
--### yarn ###
--# https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
--
--.yarn/*
--!.yarn/releases
--!.yarn/patches
--!.yarn/plugins
--!.yarn/sdks
--!.yarn/versions
--
--# if you are NOT using Zero-installs, then:
--# comment the following lines
--# !.yarn/cache
--
--# and uncomment the following lines
--.pnp.*
--
--# End of https://www.toptal.com/developers/gitignore/api/linux,macos,node,patch,sublimetext,vim,visualstudiocode,windows,yarn
-+# End of https://www.toptal.com/developers/gitignore/api/linux,macos,node,patch,sublimetext,vim,visualstudiocode,windows
- 
- ### THE PROJECT SPECIFIES #################################################
- 
 diff --git a/.gitattributes b/.gitattributes
 index 80a5adc..3e3cdc7 100644
 --- a/.gitattributes
@@ -164,7 +126,7 @@ index 88b4015..ecd73ea 100644
      "dbaeumer.vscode-eslint",
      "editorconfig.editorconfig",
 diff --git a/.vscode/settings.json b/.vscode/settings.json
-index 4fae63d..3346832 100644
+index 8f37f7e..071fae9 100644
 --- a/.vscode/settings.json
 +++ b/.vscode/settings.json
 @@ -1,5 +1,4 @@
@@ -173,7 +135,7 @@ index 4fae63d..3346832 100644
    "explorer.fileNesting.enabled": true,
    "explorer.fileNesting.expand": false,
    "explorer.fileNesting.patterns": {
-@@ -8,33 +7,24 @@
+@@ -7,33 +6,24 @@
      ".gitattributes": ".gitignore",
      ".markdownlint.*": ".markdownlint-cli2.*",
      ".tool-versions": ".node-version, .nvmrc",
@@ -258,7 +220,7 @@ index e2e28b5..3503387 100644
  
  ## Migrate to NPM
 diff --git a/package.json b/package.json
-index efa4edf..4b26a41 100644
+index 3ab1ac4..42d295b 100644
 --- a/package.json
 +++ b/package.json
 @@ -2,7 +2,7 @@
@@ -272,12 +234,12 @@ index efa4edf..4b26a41 100644
      "template"
 @@ -17,19 +17,19 @@
    "scripts": {
-     "clean": "rimraf -g .eslintcache \"*.tgz\" \"*.tsbuildinfo\" \"node_modules/.cache/**/*\"",
+     "clean": "rimraf -g .eslintcache \"*.tgz\" \"*.tsbuildinfo\" node_modules/.cache",
      "postinstall": "husky",
 -    "lint": "conc -m 1 \"yarn:lint:*:check\"",
 +    "lint": "conc -m 1 \"npm:lint:*:check\"",
      "lint:cspell:check": "cspell lint --no-progress --show-suggestions -u \"./**/*\"",
-     "lint:eslint:check": "eslint --cache --cache-strategy=content -f codeframe \"./**/*\"",
+     "lint:eslint:check": "eslint --cache --cache-location node_modules/.cache/eslint/ --cache-strategy=content -f codeframe \"./**/*\"",
 -    "lint:eslint:fix": "yarn run lint:eslint:check --fix",
 -    "lint:fix": "conc -m 1 \"yarn:lint:cspell:check\" \"yarn:lint:*:fix\"",
 +    "lint:eslint:fix": "npm run lint:eslint:check -- --fix",
@@ -296,15 +258,15 @@ index efa4edf..4b26a41 100644
    },
    "prettier": "@kurone-kito/prettier-config",
    "devDependencies": {
-@@ -45,7 +45,6 @@
+@@ -43,7 +43,6 @@
+     "@kurone-kito/prettier-config": "^0.8.4",
      "@kurone-kito/typescript-config": "^0.15.0-alpha.2",
-     "@typescript-eslint/eslint-plugin": "^8.0.1",
      "@typescript-eslint/parser": "^8.0.1",
 -    "@yarnpkg/sdks": "^3.1.0",
      "concurrently": "^8.2.2",
      "cspell": "^8.13.2",
-     "eslint": "^8.55.0",
-@@ -72,7 +71,6 @@
+     "eslint": "^9.8.0",
+@@ -57,7 +56,6 @@
      "typescript": "~5.5.4",
      "typescript-eslint-language-service": "^5.0.5"
    },
