@@ -220,7 +220,7 @@ index e2e28b5..3503387 100644
  
  ## Migrate to NPM
 diff --git a/package.json b/package.json
-index 16f1a02..833dd2d 100644
+index f9b0409..4179796 100644
 --- a/package.json
 +++ b/package.json
 @@ -2,7 +2,7 @@
@@ -232,10 +232,10 @@ index 16f1a02..833dd2d 100644
    "keywords": [
      "boilerplate",
      "template"
-@@ -17,19 +17,19 @@
+@@ -16,20 +16,20 @@
+   "files": [],
    "scripts": {
      "clean": "rimraf -g .eslintcache \"*.tgz\" \"*.tsbuildinfo\" node_modules/.cache",
-     "postinstall": "husky",
 -    "lint": "conc -m 1 \"yarn:lint:*:check\"",
 +    "lint": "conc -m 1 \"npm:lint:*:check\"",
      "lint:cspell:check": "cspell lint --no-progress --show-suggestions -u \"./**/*\"",
@@ -252,6 +252,7 @@ index 16f1a02..833dd2d 100644
 -    "lint:prettier:fix": "yarn run prettier -uw",
 +    "lint:prettier:check": "npm run prettier -- -cu",
 +    "lint:prettier:fix": "npm run prettier -- -uw",
+     "postinstall": "husky",
      "prettier": "prettier --cache --log-level=warn \"$@\" \"./**/*\"",
 -    "test": "yarn run lint"
 +    "test": "npm run lint"

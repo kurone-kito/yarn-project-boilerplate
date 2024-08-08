@@ -16,7 +16,6 @@
   "files": [],
   "scripts": {
     "clean": "rimraf -g .eslintcache \"*.tgz\" \"*.tsbuildinfo\" node_modules/.cache",
-    "postinstall": "husky",
     "lint": "conc -m 1 \"yarn:lint:*:check\"",
     "lint:cspell:check": "cspell lint --no-progress --show-suggestions -u \"./**/*\"",
     "lint:eslint:check": "eslint --cache --cache-location node_modules/.cache/eslint/ --cache-strategy=content -f codeframe \"./**/*\"",
@@ -28,6 +27,7 @@
     "lint:oxlint:fix": "oxlint --fix",
     "lint:prettier:check": "yarn run prettier -cu",
     "lint:prettier:fix": "yarn run prettier -uw",
+    "postinstall": "husky",
     "prettier": "prettier --cache --log-level=warn \"$@\" \"./**/*\"",
     "test": "yarn run lint"
   },
