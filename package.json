@@ -39,7 +39,7 @@
     "@kurone-kito/commitlint-config": "^0.15.0-alpha.2",
     "@kurone-kito/cspell-config": "^0.15.0-alpha.2",
     "@kurone-kito/eslint-config-base": "^0.15.0-alpha.2",
-    "@kurone-kito/lint-staged-config": "^0.15.0-alpha.2",
+    "@kurone-kito/lint-staged-config": "^0.16.0",
     "@kurone-kito/prettier-config": "^0.15.0-alpha.2",
     "@kurone-kito/typescript-config": "^0.15.0-alpha.2",
     "@typescript-eslint/parser": "^8.0.1",

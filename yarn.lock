@@ -965,16 +965,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@kurone-kito/lint-staged-config@npm:^0.15.0-alpha.2":
-  version: 0.15.0-alpha.2
-  resolution: "@kurone-kito/lint-staged-config@npm:0.15.0-alpha.2"
+"@kurone-kito/lint-staged-config@npm:^0.16.0":
+  version: 0.16.0
+  resolution: "@kurone-kito/lint-staged-config@npm:0.16.0"
   peerDependencies:
     cspell: ">=5.7.x"
     eslint: ">=8.x.x"
     eslint-formatter-codeframe: "*"
     lint-staged: ">=12.1.0"
     prettier: ">=3.0.x"
-  checksum: 10/f300175e0fa35e50aab27446067b345732a8c4265c189dc8ab838deee719c68e8659e320969ebcc2c4813d8f79f9ca62a9ae1315088174334cea59f665d99889
+  checksum: 10/4c6bc0449d5656dd8491d0e458c2cca0331b4207f15d172f835239773e938f8f5f2d5aedb2b1d9a0cdab5e683bccd85700c451029ce0ea2e4088d329be7e17a6
   languageName: node
   linkType: hard
 
@@ -1013,7 +1013,7 @@ __metadata:
     "@kurone-kito/commitlint-config": "npm:^0.15.0-alpha.2"
     "@kurone-kito/cspell-config": "npm:^0.15.0-alpha.2"
     "@kurone-kito/eslint-config-base": "npm:^0.15.0-alpha.2"
-    "@kurone-kito/lint-staged-config": "npm:^0.15.0-alpha.2"
+    "@kurone-kito/lint-staged-config": "npm:^0.16.0"
     "@kurone-kito/prettier-config": "npm:^0.15.0-alpha.2"
     "@kurone-kito/typescript-config": "npm:^0.15.0-alpha.2"
     "@typescript-eslint/parser": "npm:^8.0.1"
