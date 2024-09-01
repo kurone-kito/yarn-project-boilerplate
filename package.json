@@ -41,7 +41,7 @@
     "@kurone-kito/eslint-config-base": "^0.15.0-alpha.2",
     "@kurone-kito/lint-staged-config": "^0.15.0-alpha.2",
     "@kurone-kito/prettier-config": "^0.15.0-alpha.2",
-    "@kurone-kito/typescript-config": "^0.15.0-alpha.2",
+    "@kurone-kito/typescript-config": "^0.16.0",
     "@typescript-eslint/parser": "^8.0.1",
     "@yarnpkg/sdks": "^3.2.0",
     "concurrently": "^8.2.2",
