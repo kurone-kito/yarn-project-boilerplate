@@ -10,5 +10,3 @@ ignorePaths:
   - patches
 usePnP: true
 version: '0.2'
-words:
-  - aicommits
