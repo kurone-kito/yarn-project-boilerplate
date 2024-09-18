@@ -220,7 +220,7 @@ index 3bd776b..a486a18 100644
  
  ## Migrate to NPM
 diff --git a/package.json b/package.json
-index 8c6cc40..b035b64 100644
+index 0598c1b..b035b64 100644
 --- a/package.json
 +++ b/package.json
 @@ -2,7 +2,7 @@
@@ -271,7 +271,7 @@ index 8c6cc40..b035b64 100644
      "typescript": "~5.5.4",
      "typescript-eslint-language-service": "^5.0.5"
    },
--  "packageManager": "yarn@4.4.0+sha512.91d93b445d9284e7ed52931369bc89a663414e5582d00eea45c67ddc459a2582919eece27c412d6ffd1bd0793ff35399381cb229326b961798ce4f4cc60ddfdb",
+-  "packageManager": "yarn@4.5.0+sha512.837566d24eec14ec0f5f1411adb544e892b3454255e61fdef8fd05f3429480102806bac7446bc9daff3896b01ae4b62d00096c7e989f1596f2af10b927532f39",
    "engines": {
      "node": "^18.20 || ^20.10 || >=22"
    },
