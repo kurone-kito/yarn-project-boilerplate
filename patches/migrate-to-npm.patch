@@ -220,7 +220,7 @@ index 3bd776b..a486a18 100644
  
  ## Migrate to NPM
 diff --git a/package.json b/package.json
-index 0598c1b..b035b64 100644
+index b658f64..65bfba7 100644
 --- a/package.json
 +++ b/package.json
 @@ -2,7 +2,7 @@
@@ -260,15 +260,15 @@ index 0598c1b..b035b64 100644
    "prettier": "@kurone-kito/prettier-config",
    "devDependencies": {
 @@ -43,7 +43,6 @@
-     "@kurone-kito/prettier-config": "^0.15.0-alpha.2",
-     "@kurone-kito/typescript-config": "^0.15.0-alpha.2",
-     "@typescript-eslint/parser": "^8.0.1",
+     "@kurone-kito/prettier-config": "^0.16.1",
+     "@kurone-kito/typescript-config": "^0.16.1",
+     "@typescript-eslint/parser": "^8.6.0",
 -    "@yarnpkg/sdks": "^3.2.0",
-     "concurrently": "^8.2.2",
-     "cspell": "^8.13.2",
-     "eslint": "^9.8.0",
+     "concurrently": "^9.0.1",
+     "cspell": "^8.14.4",
+     "eslint": "^9.10.0",
 @@ -57,7 +56,6 @@
-     "typescript": "~5.5.4",
+     "typescript": "~5.6.2",
      "typescript-eslint-language-service": "^5.0.5"
    },
 -  "packageManager": "yarn@4.5.0+sha512.837566d24eec14ec0f5f1411adb544e892b3454255e61fdef8fd05f3429480102806bac7446bc9daff3896b01ae4b62d00096c7e989f1596f2af10b927532f39",
