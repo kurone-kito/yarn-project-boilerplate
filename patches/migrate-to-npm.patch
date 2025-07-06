@@ -126,7 +126,7 @@ index 88b4015..ecd73ea 100644
      "dbaeumer.vscode-eslint",
      "editorconfig.editorconfig",
 diff --git a/.vscode/settings.json b/.vscode/settings.json
-index 8f37f7e..071fae9 100644
+index 22141ff..9a56279 100644
 --- a/.vscode/settings.json
 +++ b/.vscode/settings.json
 @@ -1,5 +1,4 @@
@@ -135,15 +135,16 @@ index 8f37f7e..071fae9 100644
    "explorer.fileNesting.enabled": true,
    "explorer.fileNesting.expand": false,
    "explorer.fileNesting.patterns": {
-@@ -7,33 +6,24 @@
+@@ -7,7 +6,7 @@
      ".gitattributes": ".gitignore",
      ".markdownlint.*": ".markdownlint-cli2.*",
      ".tool-versions": ".node-version, .nvmrc",
--    "package.json": ".yarnrc.yml, yarn.lock, .pnp.*"
-+    "package.json": ".npmrc, package-lock.json"
+-    "package.json": ".yarnrc.yml, yarn.lock, .pnp.*",
++    "package.json": ".npmrc, package-lock.json",
+     "tsconfig.json": "*.tsbuildinfo"
    },
    "files.associations": {
-     ".imgbotconfig": "json",
+@@ -15,26 +14,17 @@
      "LICENSE": "plaintext"
    },
    "files.readonlyInclude": {
@@ -168,8 +169,8 @@ index 8f37f7e..071fae9 100644
    "typescript.enablePromptUseWorkspaceTsdk": true,
 -  "typescript.tsdk": ".yarn/sdks/typescript/lib",
    "yaml.schemas": {
-     "https://coderabbit.ai/integrations/coderabbit-overrides.v2.json": [
-       ".coderabbit.yaml"
+     "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/packages/cspell-types/cspell.schema.json": [
+       "cspell.config.yml"
 diff --git a/README.md b/README.md
 index 3bd776b..a486a18 100644
 --- a/README.md
