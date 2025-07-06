@@ -1,9 +1,9 @@
 diff --git a/.gitattributes b/.gitattributes
-index 80a5adc..3e3cdc7 100644
+index 31616e7..bd02645 100644
 --- a/.gitattributes
 +++ b/.gitattributes
-@@ -4,5 +4,3 @@
- .gitignore export-ignore
+@@ -3,5 +3,3 @@
+ .github/** export-ignore
  .husky/** export-ignore
  .imgbotconfig export-ignore
 -
