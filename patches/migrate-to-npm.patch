@@ -219,8 +219,18 @@ index 3bd776b..a486a18 100644
  ```
  
  ## Migrate to NPM
+diff --git a/cspell.config.yml b/cspell.config.yml
+index 3ead44b..6b8d53f 100644
+--- a/cspell.config.yml
++++ b/cspell.config.yml
+@@ -8,5 +8,4 @@ import:
+ ignorePaths:
+   - node_modules
+   - patches
+-usePnP: true
+ version: '0.2'
 diff --git a/package.json b/package.json
-index b658f64..65bfba7 100644
+index b658f64..3e3ed93 100644
 --- a/package.json
 +++ b/package.json
 @@ -2,7 +2,7 @@
@@ -250,9 +260,10 @@ index b658f64..65bfba7 100644
      "lint:oxlint:fix": "oxlint --fix",
 -    "lint:prettier:check": "yarn run prettier -cu",
 -    "lint:prettier:fix": "yarn run prettier -uw",
+-    "postinstall": "husky",
 +    "lint:prettier:check": "npm run prettier -- -cu",
 +    "lint:prettier:fix": "npm run prettier -- -uw",
-     "postinstall": "husky",
++    "prepare": "husky",
      "prettier": "prettier --cache --log-level=warn \"$@\" \"./**/*\"",
 -    "test": "yarn run lint"
 +    "test": "npm run lint"
