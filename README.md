@@ -18,6 +18,7 @@
 - Node.js: Any of the following versions
   - Iron LTS (`^20.11.x`)
   - Jod LTS (`^22.x.x`)
+  - Latest (`>=23.x.x`)
 
 ## Install the dependencies
 
