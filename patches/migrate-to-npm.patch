@@ -9,13 +9,13 @@ index 31616e7..bd02645 100644
 -
 -.yarn/** linguist-vendored
 diff --git a/.github/workflows/push.yml b/.github/workflows/push.yml
-index 721bf28..994c1d9 100644
+index f863c69..377c0e1 100644
 --- a/.github/workflows/push.yml
 +++ b/.github/workflows/push.yml
-@@ -21,19 +21,19 @@ jobs:
-         uses: actions/setup-node@v4
-         with:
+@@ -23,19 +23,19 @@ jobs:
            node-version: ${{ matrix.node-version }}
+       - name: Install the latest corepack explicitly
+         run: npm install --force -g corepack@latest
 -      - name: Enable the corepack because of the Yarn berry
 +      - name: Enable the corepack
          run: corepack enable
