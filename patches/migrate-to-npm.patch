@@ -231,7 +231,7 @@ index 3ead44b..6b8d53f 100644
 -usePnP: true
  version: '0.2'
 diff --git a/package.json b/package.json
-index 3ed47a0..022a185 100644
+index 8b89408..ccc4f5a 100644
 --- a/package.json
 +++ b/package.json
 @@ -2,7 +2,7 @@
@@ -272,15 +272,15 @@ index 3ed47a0..022a185 100644
    "prettier": "@kurone-kito/prettier-config",
    "devDependencies": {
 @@ -43,7 +43,6 @@
-     "@kurone-kito/prettier-config": "^0.16.1",
-     "@kurone-kito/typescript-config": "^0.16.1",
-     "@typescript-eslint/parser": "^8.6.0",
+     "@kurone-kito/prettier-config": "^0.18.0-alpha.2",
+     "@kurone-kito/typescript-config": "^0.18.0-alpha.2",
+     "@typescript-eslint/parser": "^8.16.0",
 -    "@yarnpkg/sdks": "^3.2.0",
-     "concurrently": "^9.0.1",
-     "cspell": "^8.14.4",
-     "eslint": "^9.10.0",
+     "concurrently": "^9.1.0",
+     "cspell": "^8.16.0",
+     "eslint": "^9.15.0",
 @@ -57,7 +56,6 @@
-     "typescript": "~5.6.2",
+     "typescript": "~5.7.2",
      "typescript-eslint-language-service": "^5.0.5"
    },
 -  "packageManager": "yarn@4.9.1+sha512.f95ce356460e05be48d66401c1ae64ef84d163dd689964962c6888a9810865e39097a5e9de748876c2e0bf89b232d583c33982773e9903ae7a76257270986538",
