@@ -1,21 +1,21 @@
 diff --git a/.gitattributes b/.gitattributes
-index 80a5adc..3e3cdc7 100644
+index 31616e7..bd02645 100644
 --- a/.gitattributes
 +++ b/.gitattributes
-@@ -4,5 +4,3 @@
- .gitignore export-ignore
+@@ -3,5 +3,3 @@
+ .github/** export-ignore
  .husky/** export-ignore
  .imgbotconfig export-ignore
 -
 -.yarn/** linguist-vendored
 diff --git a/.github/workflows/push.yml b/.github/workflows/push.yml
-index 6a69989..d10fb98 100644
+index 2299336..c41741b 100644
 --- a/.github/workflows/push.yml
 +++ b/.github/workflows/push.yml
-@@ -21,19 +21,19 @@ jobs:
-         uses: actions/setup-node@v4
-         with:
+@@ -23,19 +23,19 @@ jobs:
            node-version: ${{ matrix.node-version }}
+       - name: Install the latest corepack explicitly
+         run: npm install --force -g corepack@latest
 -      - name: Enable the corepack because of the Yarn berry
 +      - name: Enable the corepack
          run: corepack enable
@@ -126,7 +126,7 @@ index 88b4015..ecd73ea 100644
      "dbaeumer.vscode-eslint",
      "editorconfig.editorconfig",
 diff --git a/.vscode/settings.json b/.vscode/settings.json
-index 8f37f7e..071fae9 100644
+index 22141ff..9a56279 100644
 --- a/.vscode/settings.json
 +++ b/.vscode/settings.json
 @@ -1,5 +1,4 @@
@@ -135,15 +135,16 @@ index 8f37f7e..071fae9 100644
    "explorer.fileNesting.enabled": true,
    "explorer.fileNesting.expand": false,
    "explorer.fileNesting.patterns": {
-@@ -7,33 +6,24 @@
+@@ -7,7 +6,7 @@
      ".gitattributes": ".gitignore",
      ".markdownlint.*": ".markdownlint-cli2.*",
      ".tool-versions": ".node-version, .nvmrc",
--    "package.json": ".yarnrc.yml, yarn.lock, .pnp.*"
-+    "package.json": ".npmrc, package-lock.json"
+-    "package.json": ".yarnrc.yml, yarn.lock, .pnp.*",
++    "package.json": ".npmrc, package-lock.json",
+     "tsconfig.json": "*.tsbuildinfo"
    },
    "files.associations": {
-     ".imgbotconfig": "json",
+@@ -15,26 +14,17 @@
      "LICENSE": "plaintext"
    },
    "files.readonlyInclude": {
@@ -168,10 +169,10 @@ index 8f37f7e..071fae9 100644
    "typescript.enablePromptUseWorkspaceTsdk": true,
 -  "typescript.tsdk": ".yarn/sdks/typescript/lib",
    "yaml.schemas": {
-     "https://coderabbit.ai/integrations/coderabbit-overrides.v2.json": [
-       ".coderabbit.yaml"
+     "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/packages/cspell-types/cspell.schema.json": [
+       "cspell.config.yml"
 diff --git a/README.md b/README.md
-index 3bd776b..a486a18 100644
+index 43725ae..2ac6c78 100644
 --- a/README.md
 +++ b/README.md
 @@ -1,8 +1,7 @@
@@ -219,8 +220,18 @@ index 3bd776b..a486a18 100644
  ```
  
  ## Migrate to NPM
+diff --git a/cspell.config.yml b/cspell.config.yml
+index 3ead44b..6b8d53f 100644
+--- a/cspell.config.yml
++++ b/cspell.config.yml
+@@ -8,5 +8,4 @@ import:
+ ignorePaths:
+   - node_modules
+   - patches
+-usePnP: true
+ version: '0.2'
 diff --git a/package.json b/package.json
-index b658f64..65bfba7 100644
+index 8b89408..ccc4f5a 100644
 --- a/package.json
 +++ b/package.json
 @@ -2,7 +2,7 @@
@@ -250,9 +261,10 @@ index b658f64..65bfba7 100644
      "lint:oxlint:fix": "oxlint --fix",
 -    "lint:prettier:check": "yarn run prettier -cu",
 -    "lint:prettier:fix": "yarn run prettier -uw",
+-    "postinstall": "husky",
 +    "lint:prettier:check": "npm run prettier -- -cu",
 +    "lint:prettier:fix": "npm run prettier -- -uw",
-     "postinstall": "husky",
++    "prepare": "husky",
      "prettier": "prettier --cache --log-level=warn \"$@\" \"./**/*\"",
 -    "test": "yarn run lint"
 +    "test": "npm run lint"
@@ -260,18 +272,18 @@ index b658f64..65bfba7 100644
    "prettier": "@kurone-kito/prettier-config",
    "devDependencies": {
 @@ -43,7 +43,6 @@
-     "@kurone-kito/prettier-config": "^0.16.1",
-     "@kurone-kito/typescript-config": "^0.16.1",
-     "@typescript-eslint/parser": "^8.6.0",
+     "@kurone-kito/prettier-config": "^0.18.0-alpha.2",
+     "@kurone-kito/typescript-config": "^0.18.0-alpha.2",
+     "@typescript-eslint/parser": "^8.16.0",
 -    "@yarnpkg/sdks": "^3.2.0",
-     "concurrently": "^9.0.1",
-     "cspell": "^8.14.4",
-     "eslint": "^9.10.0",
+     "concurrently": "^9.1.0",
+     "cspell": "^8.16.0",
+     "eslint": "^9.15.0",
 @@ -57,7 +56,6 @@
-     "typescript": "~5.6.2",
+     "typescript": "~5.7.2",
      "typescript-eslint-language-service": "^5.0.5"
    },
--  "packageManager": "yarn@4.5.0+sha512.837566d24eec14ec0f5f1411adb544e892b3454255e61fdef8fd05f3429480102806bac7446bc9daff3896b01ae4b62d00096c7e989f1596f2af10b927532f39",
+-  "packageManager": "yarn@4.9.1+sha512.f95ce356460e05be48d66401c1ae64ef84d163dd689964962c6888a9810865e39097a5e9de748876c2e0bf89b232d583c33982773e9903ae7a76257270986538",
    "engines": {
-     "node": "^18.20 || ^20.10 || >=22"
+     "node": "^20.11 || >=22"
    },
